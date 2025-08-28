@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="From Editor to Dense Geometry Estimator">
+  <meta name="keywords" content="depth, estimation, normal, estimation, dense prediction, diffusion transformer">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:image:src" content="http://fe2e.github.io/images/fe2e_logo_square.jpg">
+  <meta name="twitter:title" content="FE2E">
+  <meta name="twitter:description" content="From Editor to Dense Geometry Estimator">
+  <meta name="twitter:creator" content="@jiyuan_wang">
+
+  <title>FE2E: From Editor to Dense Geometry Estimator</title>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1FWSVCGZTG"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-1FWSVCGZTG');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./css/bulma.min.css">
+  <link rel="stylesheet" href="./css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./css/twentytwenty.css">
+  <link rel="stylesheet" href="./css/index.css">
+  <link rel="icon" href="./images/favicon.svg">
+
+  <script src="./js/jquery-3.2.1.min.js"></script>
+  <script src="./js/jquery.event.move.js"></script>
+  <script src="./js/jquery.twentytwenty.js"></script>
+  <script src="./js/bulma-carousel.min.js"></script>
+  <script src="./js/bulma-slider.min.js"></script>
+  <script src="./js/fontawesome.all.min.js"></script>
+
+  <!--MathJax-->
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+      },
+      svg: {
+        fontCache: 'global'
+      }
+    };
+  </script>
+  <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">From Editor to Dense Geometry Estimator</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://wangjiyuan9.github.io/" target="_blank" rel="noopener noreferrer">
+                Jiyuan Wang</a><sup>1,2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?hl=zh-CN&user=t8xkhscAAAAJ" target="_blank" rel="noopener noreferrer">
+                Chunyu Lin</a><sup>1,*</sup>,
+            </span>
+            <span class="author-block">
+              <a href="#" target="_blank" rel="noopener noreferrer">
+                Lei Sun</a><sup>2,†</sup>
+            </span>
+            <span class="author-block">
+              <a href="#" target="_blank" rel="noopener noreferrer">
+                Rongying Liu</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=-pfkprkAAAAJ&hl=zh-CN&oi=ao" target="_blank" rel="noopener noreferrer">
+                Mingxing Li</a><sup>2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?hl=zh-CN&user=vo__egkAAAAJ" target="_blank" rel="noopener noreferrer">
+                Lang Nie</a><sup>3</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://kangliao929.github.io/" target="_blank" rel="noopener noreferrer">
+                Kang Liao</a><sup>4</sup>,
+            </span>
+          </div>
+            <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://cxxgtxy.github.io/" target="_blank" rel="noopener noreferrer">
+                Xiangxiang Chu</a><sup>2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://faculty.bjtu.edu.cn/5900/" target="_blank" rel="noopener noreferrer">
+                Yao Zhao</a><sup>1</sup>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>Beijing Jiaotong University &nbsp;&nbsp;<sup>2</sup>Alibaba Group</span><br>
+            <span class="author-block"><sup>3</sup>Chongqing University of Posts and Telecommunications &nbsp;&nbsp;<sup>4</sup>Nanyang Technological University</span><br>
+            <span class="author-block"><sup>*</sup>Corresponding author &nbsp;&nbsp;<sup>†</sup>Project leader</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2312.02145" target="_blank" rel="noopener noreferrer"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf" style="color: orangered"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/prs-eth/marigold" target="_blank" rel="noopener noreferrer"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>
+                    Code:
+                  </span>
+                  <img
+                          src="https://img.shields.io/github/stars/prs-eth/marigold?style=for-the-badge&label=&color=333333&labelColor=333333" alt="GitHub stars"
+                          style="margin-top: 3px;"
+                  >
+                  <span>
+                    stars
+                  </span>
+                </a>
+              </span>
+              <!-- Model Link -->
+              <span class="link-block">
+                <a href="#" target="_blank" rel="noopener noreferrer"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      &#129303;
+                  </span>
+                  <span>Model</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <!-- TODO: Replace with FE2E teaser image -->
+      <img id="teaser" width="100%" src="./images/demo.png" alt="Teaser image demonstrating FE2E dense geometry prediction."/>
+      <p class="subtitle has-text-left" style="margin-top: 1rem;">
+        We present <span class="methodname">FE2E</span>, a DiT-based foundation model for monocular dense geometry prediction. Trained with limited supervision, FE2E achieves promising performance improvements in zero-shot depth and normal estimation. The bar length indicates average ranking across all metrics from multiple datasets (lower is better). ⭐ represents training data amount.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+<section class="section pt-0">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Overview</h2>
+        <div class="content has-text-justified">
+          <p>
+            Leveraging visual priors from pre-trained text-to-image generative models has shown success in dense prediction. However, dense prediction is inherently an image-to-image task, 
+            suggesting that image editing models, rather than generators, may be a more suitable foundation for fine-tuning.
+          </p>
+
+          <p>
+            Our systematic analysis reveals that editing models possess inherent structural priors, enabling them to converge more stably by "refining" their innate features, 
+            and ultimately achieve higher performance than their generative counterparts. 
+            Based on these findings, we introduce FE2E, a framework that pioneeringly adapts an advanced editing model based on Diffusion Transformer (DiT) architecture for dense geometry prediction.
+            To tailor the editor for deterministic tasks, we reformulate the editor's original flow matching loss 
+            into the "consistent velocity" training objective and use logarithmic quantization to resolve precision conflicts.
+          </p>
+
+          <p>
+            Additionally, we leverage the DiT's built-in global attention mechanism to design a cost-free joint estimation strategy, which allows the model to output both depth and normals 
+            in a single forward pass. Without scaling up training data, <span class="methodname">FE2E</span> achieves significant performance improvements in both zero-shot monocular depth and normal estimation.
+          </p>
+
+          <p>
+            The gallery below presents several images and comparisons of <span class="methodname">FE2E</span> with previous state-of-the-art methods. 
+            Use the slider and gestures to reveal details on both sides.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+  </div>
+</section>
+
+
+<section class="section pt-0 pb-4">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Gallery</h2>
+        <!-- TODO: Replace gallery images with FE2E results -->
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero is-light is-small mt-4">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel-depth" class="carousel results-carousel">
+
+        <div class="twoitem">
+          <div class="twentytwenty-container twentytwenty-container-top">
+            <div class="cmpcontent">
+              <img src="./images/Depth/indoors_scene_00019_scan_00183_pred_00019_00183_indoors_270_010_input.png">
+            </div>
+            <div class="cmpcontent">
+              <img src="./images/Depth/indoors_scene_00019_scan_00183_pred_00019_00183_indoors_270_010_ours.png">
+            </div>
+          </div>
+          <div class="twentytwenty-container twentytwenty-container-bottom">
+            <div class="cmpcontent">
+              <img src="./images/Depth/indoors_scene_00019_scan_00183_pred_00019_00183_indoors_270_010_Lotus.png">
+            </div>
+            <div class="cmpcontent">
+              <img src="./images/Depth/indoors_scene_00019_scan_00183_pred_00019_00183_indoors_270_010_ours.png">
+            </div>
+          </div>
+        </div>
+
+        <div class="twoitem">
+          <div class="twentytwenty-container twentytwenty-container-top">
+            <div class="cmpcontent">
+              <img src="./images/Depth/indoors_scene_00019_scan_00183_pred_00019_00183_indoors_000_010_Lpred_input.png">
+            </div>
+            <div class="cmpcontent">
+              <img src="./images/Depth/indoors_scene_00019_scan_00183_pred_00019_00183_indoors_000_010_Lpred_ours.png">
+            </div>
+          </div>
+          <div class="twentytwenty-container twentytwenty-container-bottom">
+            <div class="cmpcontent">
+              <img src="./images/Depth/indoors_scene_00019_scan_00183_00019_00183_indoors_000_010_depthanything_pred.png">
+            </div>
+            <div class="cmpcontent">
+              <img src="./images/Depth/indoors_scene_00019_scan_00183_pred_00019_00183_indoors_000_010_Lpred_ours.png">
+            </div>
+          </div>
+        </div>
+
+        <div class="twoitem">
+          <div class="twentytwenty-container twentytwenty-container-top">
+            <div class="cmpcontent">
+              <img src="./images/Depth/test_dining_room_0032_pred_1432_Lpred_input.png">
+            </div>
+            <div class="cmpcontent">
+              <img src="./images/Depth/test_dining_room_0032_pred_1432_Lpred_ours.png">
+            </div>
+          </div>
+          <div class="twentytwenty-container twentytwenty-container-bottom">
+            <div class="cmpcontent">
+              <img src="./images/Depth/test_dining_room_0032_rgb_1432_depthanything.png">
+            </div>
+            <div class="cmpcontent">
+              <img src="./images/Depth/test_dining_room_0032_pred_1432_Lpred_ours.png">
+            </div>
+          </div>
+        </div>
+
+        <div class="twoitem">
+          <div class="twentytwenty-container twentytwenty-container-top">
+            <div class="cmpcontent">
+              <img src="./images/Depth/test_bedroom_0133_pred_0519_Lpred_input.png">
+            </div>
+            <div class="cmpcontent">
+              <img src="./images/Depth/test_bedroom_0133_pred_0519_ours.png">
+            </div>
+          </div>
+          <div class="twentytwenty-container twentytwenty-container-bottom">
+            <div class="cmpcontent">
+              <img src="./images/Depth/test_bedroom_0133_rgb_0519_depthanything.png">
+            </div>
+            <div class="cmpcontent">
+              <img src="./images/Depth/test_bedroom_0133_pred_0519_ours.png">
+            </div>
+          </div>
+        </div>
+
+        <div class="twoitem">
+          <div class="twentytwenty-container twentytwenty-container-top">
+            <div class="cmpcontent">
+              <img src="./images/Depth/DSC_0639.JPG">
+            </div>
+            <div class="cmpcontent">
+              <img src="./images/Depth/rgb_pipes_images_dslr_images_pred_DSC_0639_Lpred_ours.png">
+            </div>
+          </div>
+          <div class="twentytwenty-container twentytwenty-container-bottom">
+            <div class="cmpcontent">
+              <img src="./images/Depth/rgb_pipes_images_dslr_images_DSC_0639_depthanything.png">
+            </div>
+            <div class="cmpcontent">
+              <img src="./images/Depth/rgb_pipes_images_dslr_images_pred_DSC_0639_Lpred_ours.png">
+            </div>
+          </div>
+        </div>
+
+        <div class="twoitem">
+          <div class="twentytwenty-container twentytwenty-container-top">
+            <div class="cmpcontent">
+              <img src="./images/Depth/test_bookstore_0001_pred_0084_Lpred_input.png">
+            </div>
+            <div class="cmpcontent">
+              <img src="./images/Depth/test_bookstore_0001_pred_0084_Lpred_ours.png">
+            </div>
+          </div>
+          <div class="twentytwenty-container twentytwenty-container-bottom">
+            <div class="cmpcontent">
+              <img src="./images/Depth/test_bookstore_0001_rgb_0084_depthanything.png">
+            </div>
+            <div class="cmpcontent">
+              <img src="./images/Depth/test_bookstore_0001_pred_0084_Lpred_ours.png">
+            </div>
+          </div>
+        </div>
+
+        <div class="twoitem">
+          <div class="twentytwenty-container twentytwenty-container-top">
+            <div class="cmpcontent">
+              <img src="./images/Depth/scene0608_00_color_pred_002000_Lpred_input.png">
+            </div>
+            <div class="cmpcontent">
+              <img src="./images/Depth/scene0608_00_color_pred_002000_Lpred_ours.png">
+            </div>
+          </div>
+          <div class="twentytwenty-container twentytwenty-container-bottom">
+            <div class="cmpcontent">
+              <img src="./images/Depth/scene0608_00_color_002000_depthanything.png">
+            </div>
+            <div class="cmpcontent">
+              <img src="./images/Depth/scene0608_00_color_pred_002000_Lpred_ours.png">
+            </div>
+          </div>
+        </div>
+
+        <div class="twoitem">
+          <div class="twentytwenty-container twentytwenty-container-top">
+            <div class="cmpcontent">
+              <img src="./images/Depth/scene0500_00_color_pred_000000_Lpred_input.png">
+            </div>
+            <div class="cmpcontent">
+              <img src="./images/Depth/scene0500_00_color_pred_000000_Lpred_ours.png">
+            </div>
+          </div>
+          <div class="twentytwenty-container twentytwenty-container-bottom">
+            <div class="cmpcontent">
+              <img src="./images/Depth/scene0500_00_color_000000_depthanything.png">
+            </div>
+            <div class="cmpcontent">
+              <img src="./images/Depth/scene0500_00_color_pred_000000_Lpred_ours.png">
+            </div>
+          </div>
+        </div>
+
+        <div class="twoitem">
+          <div class="twentytwenty-container twentytwenty-container-top">
+            <div class="cmpcontent">
+              <img src="./images/Depth/scene0606_01_color_pred_000600_Lpred_input.png">
+            </div>
+            <div class="cmpcontent">
+              <img src="./images/Depth/scene0606_01_color_pred_000600_Lpred_ours.png">
+            </div>
+          </div>
+          <div class="twentytwenty-container twentytwenty-container-bottom">
+            <div class="cmpcontent">
+              <img src="./images/Depth/scene0606_01_color_000600.jpg_depthanything_pred.png">
+            </div>
+            <div class="cmpcontent">
+              <img src="./images/Depth/scene0606_01_color_pred_000600_Lpred_ours.png">
+            </div>
+          </div>
+        </div>
+
+
+        <div class="twoitem">
+          <div class="twentytwenty-container twentytwenty-container-top">
+            <div class="cmpcontent">
+              <img src="./images/Depth/indoors_scene_00020_scan_00185_pred_00020_00185_indoors_000_000_Lpred_input.png">
+            </div>
+            <div class="cmpcontent">
+              <img src="./images/Depth/indoors_scene_00020_scan_00185_pred_00020_00185_indoors_000_000_Lpred_ours.png">
+            </div>
+          </div>
+          <div class="twentytwenty-container twentytwenty-container-bottom">
+            <div class="cmpcontent">
+              <img src="./images/Depth/indoors_scene_00020_scan_00185_00020_00185_indoors_000_000_depthanything.png">
+            </div>
+            <div class="cmpcontent">
+              <img src="./images/Depth/indoors_scene_00020_scan_00185_pred_00020_00185_indoors_000_000_Lpred_ours.png">
+            </div>
+          </div>
+        </div>
+
+        
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero is-light is-small">
+  <div class="hero-body pt-0">
+<!-- <section class="hero is-light is-small mt-4">
+  <div class="hero-body"> -->
+    <div class="container">
+      <!-- <div id="results-carousel-vertical" class="carousel results-carousel"> -->
+      <div id="results-carousel-normal" class="carousel results-carousel">
+
+        
+
+
+
+        <div class="twoitem">
+          <div class="twentytwenty-container twentytwenty-container-top">
+            <div class="cmpcontent">
+              <img src="./images/normal/test_000058_img.png">
+            </div>
+            <div class="cmpcontent">
+              <img src="./images/normal/test_000058_ours.png">
+            </div>
+          </div>
+          <div class="twentytwenty-container twentytwenty-container-bottom">
+            <div class="cmpcontent">
+              <img src="./images/normal/test_000058_lotus.png">
+            </div>
+            <div class="cmpcontent">
+              <img src="./images/normal/test_000058_ours.png">
+            </div>
+          </div>
+        </div>
+
+        <div class="twoitem">
+          <div class="twentytwenty-container twentytwenty-container-top">
+            <div class="cmpcontent">
+              <img src="./images/normal/test_000174_img.png">
+            </div>
+            <div class="cmpcontent">
+              <img src="./images/normal/test_000174_ours.png">
+            </div>
+          </div>
+          <div class="twentytwenty-container twentytwenty-container-bottom">
+            <div class="cmpcontent">
+              <img src="./images/normal/test_000174_dsine.png">
+            </div>
+            <div class="cmpcontent">
+              <img src="./images/normal/test_000174_ours.png">
+            </div>
+          </div>
+        </div>
+
+        <div class="twoitem">
+          <div class="twentytwenty-container twentytwenty-container-top">
+            <div class="cmpcontent">
+              <img src="./images/normal/scene0548_00_002050_img.png">
+            </div>
+            <div class="cmpcontent">
+              <img src="./images/normal/scene0548_00_002050_ours.png">
+            </div>
+          </div>
+          <div class="twentytwenty-container twentytwenty-container-bottom">
+            <div class="cmpcontent">
+              <img src="./images/normal/scene0548_00_002050_dsine.png">
+            </div>
+            <div class="cmpcontent">
+              <img src="./images/normal/scene0548_00_002050_ours.png">
+            </div>
+          </div>
+        </div>
+
+        <div class="twoitem">
+          <div class="twentytwenty-container twentytwenty-container-top">
+            <div class="cmpcontent">
+              <img src="./images/normal/ibims_factory_02_img.png">
+            </div>
+            <div class="cmpcontent">
+              <img src="./images/normal/ibims_factory_02_ours.png">
+            </div>
+          </div>
+          <div class="twentytwenty-container twentytwenty-container-bottom">
+            <div class="cmpcontent">
+              <img src="./images/normal/ibims_factory_02_dsine.png">
+            </div>
+            <div class="cmpcontent">
+              <img src="./images/normal/ibims_factory_02_ours.png">
+            </div>
+          </div>
+        </div>
+
+        <div class="twoitem">
+          <div class="twentytwenty-container twentytwenty-container-top">
+            <div class="cmpcontent">
+              <img src="./images/normal/test_000412_img.png">
+            </div>
+            <div class="cmpcontent">
+              <img src="./images/normal/test_000412_ours.png">
+            </div>
+          </div>
+          <div class="twentytwenty-container twentytwenty-container-bottom">
+            <div class="cmpcontent">
+              <img src="./images/normal/test_000412_dsine.png">
+            </div>
+            <div class="cmpcontent">
+              <img src="./images/normal/test_000412_ours.png">
+            </div>
+          </div>
+        </div>
+
+        <div class="twoitem">
+          <div class="twentytwenty-container twentytwenty-container-top">
+            <div class="cmpcontent">
+              <img src="./images/normal/scene0012_01_002160_img.png">
+            </div>
+            <div class="cmpcontent">
+              <img src="./images/normal/scene0012_01_002160_ours.png">
+            </div>
+          </div>
+          <div class="twentytwenty-container twentytwenty-container-bottom">
+            <div class="cmpcontent">
+              <img src="./images/normal/scene0012_01_002160_dsine.png">
+            </div>
+            <div class="cmpcontent">
+              <img src="./images/normal/scene0012_01_002160_ours.png">
+            </div>
+          </div>
+        </div>
+
+        
+
+        <div class="twoitem">
+          <div class="twentytwenty-container twentytwenty-container-top">
+            <div class="cmpcontent">
+              <img src="./images/normal/ibims_livingroom_01_img.png">
+            </div>
+            <div class="cmpcontent">
+              <img src="./images/normal/ibims_livingroom_01_ours.png">
+            </div>
+          </div>
+          <div class="twentytwenty-container twentytwenty-container-bottom">
+            <div class="cmpcontent">
+              <img src="./images/normal/ibims_livingroom_01_dsine.png">
+            </div>
+            <div class="cmpcontent">
+              <img src="./images/normal/ibims_livingroom_01_ours.png">
+            </div>
+          </div>
+        </div>
+
+        <div class="twoitem">
+          <div class="twentytwenty-container twentytwenty-container-top">
+            <div class="cmpcontent">
+              <img src="./images/normal/scene0150_01_000150_img.png">
+            </div>
+            <div class="cmpcontent">
+              <img src="./images/normal/scene0150_01_000150_ours.png">
+            </div>
+          </div>
+          <div class="twentytwenty-container twentytwenty-container-bottom">
+            <div class="cmpcontent">
+              <img src="./images/normal/scene0150_01_000150_dsine.png">
+            </div>
+            <div class="cmpcontent">
+              <img src="./images/normal/scene0150_01_000150_ours.png">
+            </div>
+          </div>
+        </div>
+
+        <div class="twoitem">
+          <div class="twentytwenty-container twentytwenty-container-top">
+            <div class="cmpcontent">
+              <img src="./images/normal/ibims_lab_06_img.png">
+            </div>
+            <div class="cmpcontent">
+              <img src="./images/normal/ibims_lab_06_ours.png">
+            </div>
+          </div>
+          <div class="twentytwenty-container twentytwenty-container-bottom">
+            <div class="cmpcontent">
+              <img src="./images/normal/ibims_lab_06_dsine.png">
+            </div>
+            <div class="cmpcontent">
+              <img src="./images/normal/ibims_lab_06_ours.png">
+            </div>
+          </div>
+        </div>
+
+        <div class="twoitem">
+          <div class="twentytwenty-container twentytwenty-container-top">
+            <div class="cmpcontent">
+              <img src="./images/normal/ibims_factory_03_img.png">
+            </div>
+            <div class="cmpcontent">
+              <img src="./images/normal/ibims_factory_03_ours.png">
+            </div>
+          </div>
+          <div class="twentytwenty-container twentytwenty-container-bottom">
+            <div class="cmpcontent">
+              <img src="./images/normal/ibims_factory_03_dsine.png">
+            </div>
+            <div class="cmpcontent">
+              <img src="./images/normal/ibims_factory_03_ours.png">
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Method. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">How it works</h2>
+        <div class="content has-text-justified">
+          <h3 class="title has-text-centered">
+            FE2E Adaptation Pipeline
+          </h3>
+
+          <p>
+            <span class="methodname">FE2E</span> adapts a pre-trained image editing model based on Diffusion Transformer (DiT) architecture for dense geometry prediction. 
+            A pre-trained VAE encodes the logarithmically quantized depth $\mathbf{d}$, input image $\mathbf{x}$, and normals $\mathbf{n}$ into latent space. 
+            The DiT $f_\theta$ learns a constant velocity $\mathbf{v}$ from a fixed origin $\mathbf{z}^y_0$ to the target latent $\mathbf{z}^y_1$, independent of $t$ or instructions. 
+            By repurposing the discarded output region, FE2E jointly predicts depth and normals without extra computation.
+          </p>
+
+          <img id="method_train" width="100%" src="./images/pipeline.png" alt="FE2E adaptation pipeline"/>
+
+          <h3 class="title has-text-centered">
+            Quantitative Zero-shot Depth Comparison
+          </h3>
+          <p>
+            Despite being trained on only 71K images, <span class="methodname">FE2E</span> significantly outperforms recent methods, 
+            including over 35% performance gains on the ETH3D dataset and outperforms the DepthAnything series which is trained on 100× more data. 
+            This highlights the effectiveness of leveraging editing model priors rather than simply scaling up training data.
+          </p>
+          <img id="comparison" width="100%" src="./images/results1.jpg" alt="Zero-shot Depth Comparison with other methods"/>
+
+          <h3 class="title has-text-centered">
+            Quantitative Zero-shot Normal Comparison
+          </h3>
+          <p class="has-text-left mt-3">
+            The <span style="background-color: #C8E6C9; padding: 2px;">best</span> and <span style="background-color: #BBDEFB; padding: 2px;">second best</span> performances are highlighted. 
+            ⭐ denotes the method relies on pre-trained Stable Diffusion.
+          </p>
+          <img id="comparison" width="100%" src="./images/results2.jpg" alt="Zero-shot Normal Comparison with other methods"/>
+          <p class="mt-5">
+            Refer to the pdf paper linked above for more details on qualitative, quantitative, and ablation studies.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Method. -->
+  </div>
+</section>
+
+
+
+
+
+<script>
+  $(window).on('load', function() {
+    bulmaCarousel.attach('#results-carousel-depth', {
+      slidesToScroll: 1,
+      slidesToShow: 3,
+      loop: true,
+      autoplay: true,
+    });
+
+    // // bulmaCarousel.attach('#results-carousel-vertical', {
+    bulmaCarousel.attach('#results-carousel-normal', {
+      slidesToScroll: 1,
+      slidesToShow: 3,
+      loop: true,
+      autoplay: true,
+    });
+
+
+
+    // For depth estimation gallery
+    $("#results-carousel-depth .twentytwenty-container-top").twentytwenty({
+      before_label: 'Input',
+      after_label: 'Ours',
+      default_offset_pct: 0.75,
+    });
+
+    $("#results-carousel-depth .twentytwenty-container-bottom").twentytwenty({
+      before_label: 'DepthAnything V2',
+      after_label: 'Ours',
+      default_offset_pct: 0.5,
+    });
+
+    // For normal estimation gallery
+    $("#results-carousel-normal .twentytwenty-container-top").twentytwenty({
+      before_label: 'Input',
+      after_label: 'Ours',
+      default_offset_pct: 0.75,
+    });
+
+    $("#results-carousel-normal .twentytwenty-container-bottom").twentytwenty({
+      before_label: 'DSINE',
+      after_label: 'Ours',
+      default_offset_pct: 0.5,
+    });
+
+    $('.results-carousel').css({
+      'max-height': '2000px',
+      'visibility': 'visible'
+    });
+  });
+</script>
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">Citation</h2>
+    <!-- TODO: Add FE2E citation when paper is published -->
+  </div>
+</section>
+
+<footer class="footer pt-4 pb-0">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            Website template based on
+            <a href="https://github.com/nerfies/nerfies.github.io">
+              Nerfies
+            </a>
+            and licensed under
+            <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
+              CC-BY-SA-4.0
+            </a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
