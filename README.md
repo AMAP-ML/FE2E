@@ -31,7 +31,7 @@
 
 We present **FE2E**, a DiT-based foundation model for monocular dense geometry prediction. We pioneer the adaptation of an advanced image editing model for dense geometry prediction, revealing that editing models possess inherent structural priors beneficial for these tasks. With limited supervision (71K images), **FE2E** achieves significant performance improvements in zero-shot depth and normal estimation.
 
----
+![teaser2](https://github.com/AMAP-ML/FE2E/raw/main/pipeline.png)
 
 ## 📢 News
 - **[2025-09-05]**: Paper released on [arXiv](https://arxiv.org/abs/2509.04338).
