@@ -104,11 +104,9 @@ Model will release soon.
 ## 🎓 Citation
 If you find our work useful in your research, please consider citing our paper:
 ```bibtex
-@misc{wang2025editor,
-    title={From Editor to Dense Geometry Estimator},
-    author={JiYuan Wang and Chunyu Lin and Lei Sun and Rongying Liu and Lang Nie and Mingxing Li and Kang Liao and Xiangxiang Chu and Yao Zhao},
-    year={2025},
-    eprint={2509.04338},
-    archivePrefix={arXiv},
-    primaryClass={cs.CV}
+@article{wang2025editor,
+  title={From Editor to Dense Geometry Estimator},
+  author={Wang, JiYuan and Lin, Chunyu and Sun, Lei and Liu, Rongying and Nie, Lang and Li, Mingxing and Liao, Kang and Chu, Xiangxiang and Zhao, Yao},
+  journal={arXiv preprint arXiv:2509.04338},
+  year={2025}
 }
