@@ -34,7 +34,7 @@ We present **FE2E**, a DiT-based foundation model for monocular dense geometry p
 ![teaser2](https://github.com/AMAP-ML/FE2E/raw/main/pipeline.png)
 
 ## 📢 News
-- **[2026-02-21]**: We will release the model in a few days. (I work on ECCV right now, so there may be a little delay. But I promise to release it as soon as I have time.)
+- **[2026-03-16]**: Release the model and Inference Code.
 - **[2025-09-05]**: Paper released on [arXiv](https://arxiv.org/abs/2509.04338).
 
 ---
