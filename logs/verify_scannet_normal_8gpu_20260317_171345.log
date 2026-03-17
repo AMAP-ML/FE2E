@@ -1,0 +1,152 @@
+即将使用 8 个GPU进行并行推理...
+Normal评估数据集: [('scannet', 'test')]
+[INFO] prompt_type=empty, 跳过Qwen模型加载
+[INFO] prompt_type=empty, 跳过Qwen模型加载
+[INFO] prompt_type=empty, 跳过Qwen模型加载
+[INFO] prompt_type=empty, 跳过Qwen模型加载
+[INFO] prompt_type=empty, 跳过Qwen模型加载
+[INFO] prompt_type=empty, 跳过Qwen模型加载
+[INFO] prompt_type=empty, 跳过Qwen模型加载
+[INFO] prompt_type=empty, 跳过Qwen模型加载
+create LoRA network from weights
+train all blocks only
+create LoRA network from weights
+train all blocks only
+create LoRA network from weights
+train all blocks only
+create LoRA network from weights
+create LoRA network from weights
+train all blocks only
+train all blocks only
+create LoRA network from weights
+create LoRA network from weights
+train all blocks only
+train all blocks only
+create LoRA network from weights
+train all blocks only
+create LoRA for DIT all blocks: 304 modules.
+enable LoRA for U-Net
+create LoRA for DIT all blocks: 304 modules.
+enable LoRA for U-Net
+create LoRA for DIT all blocks: 304 modules.
+enable LoRA for U-Net
+create LoRA for DIT all blocks: 304 modules.
+enable LoRA for U-Net
+create LoRA for DIT all blocks: 304 modules.
+enable LoRA for U-Net
+create LoRA for DIT all blocks: 304 modules.
+enable LoRA for U-Net
+create LoRA for DIT all blocks: 304 modules.
+enable LoRA for U-Net
+create LoRA for DIT all blocks: 304 modules.
+enable LoRA for U-Net
+weights are merged
+weights are merged
+weights are merged
+weights are merged
+weights are merged
+Successfully loading pipeline from /mmu_mllm_hdd_2/wjy/Step1X-Edit/pretrain.
+weights are merged
+模型标识符: LDRN
+输出目录: ./infer/eval_verify_scannet_normal_8gpu/LDRN/normal
+
+开始并行Normal评估，使用8个GPU
+================================================================================
+weights are merged
+weights are merged
+Defining test transform for scannet dataset
+Defining test transform for scannet dataset ... DONE
+Defining test transform for scannet dataset
+Defining test transform for scannet dataset
+Defining test transform for scannet dataset ... DONE
+Defining test transform for scannet dataset ... DONE
+Defining test transform for scannet dataset
+Defining test transform for scannet dataset
+Defining test transform for scannet dataset ... DONE
+Defining test transform for scannet dataset
+Defining test transform for scannet dataset ... DONE
+Defining test transform for scannet dataset
+Defining test transform for scannet dataset ... DONE
+Defining test transform for scannet dataset ... DONE
+Defining test transform for scannet dataset
+Defining test transform for scannet dataset ... DONE
+[GPU:0] 开始评估Normal数据集: scannet
+[GPU:0] | 样本:001 | ID:scene0740_00_002510 | 时间:37.46s| 
+[GPU:0] | 样本:002 | ID:scene0395_01_000160 | 时间:1.37s| 
+[GPU:0] | 样本:003 | ID:scene0481_01_000900 | 时间:1.36s| 
+[GPU:0] | 样本:004 | ID:scene0608_02_001690 | 时间:1.36s| 
+[GPU:0] | 样本:005 | ID:scene0061_00_000420 | 时间:1.29s| 
+[GPU:0] | 样本:006 | ID:scene0670_01_002840 | 时间:1.36s| 
+[GPU:0] | 样本:007 | ID:scene0662_01_001810 | 时间:1.36s| 
+[GPU:0] | 样本:008 | ID:scene0362_00_000890 | 时间:1.36s| 
+[GPU:0] | 样本:009 | ID:scene0320_03_000790 | 时间:1.36s| 
+[GPU:7] | 样本:269 | ID:scene0065_01_000800 | 时间:1.33s| 
+[GPU:2] | 样本:084 | ID:scene0460_00_000820 | 时间:1.34s| 
+[GPU:3] | 样本:121 | ID:scene0673_00_000280 | 时间:1.34s| 
+[GPU:0] | 样本:010 | ID:scene0685_02_003050 | 时间:1.36s| 
+[GPU:5] | 样本:195 | ID:scene0113_01_000000 | 时间:1.36s| 
+[GPU:1] | 样本:047 | ID:scene0617_00_001270 | 时间:1.37s| 
+[GPU:4] | 样本:158 | ID:scene0623_01_000930 | 时间:1.37s| 
+[GPU:6] | 样本:232 | ID:scene0370_02_000080 | 时间:1.38s| 
+[GPU:0] | 样本:011 | ID:scene0656_03_000490 | 时间:1.36s| 
+[GPU:0] | 样本:012 | ID:scene0343_00_000210 | 时间:1.36s| 
+[GPU:0] | 样本:013 | ID:scene0220_02_000450 | 时间:1.36s| 
+[GPU:0] | 样本:014 | ID:scene0525_01_000960 | 时间:1.36s| 
+[GPU:0] | 样本:015 | ID:scene0012_01_002160 | 时间:1.27s| 
+[GPU:0] | 样本:016 | ID:scene0532_00_000000 | 时间:1.36s| 
+[GPU:0] | 样本:017 | ID:scene0415_00_000750 | 时间:1.36s| 
+[GPU:0] | 样本:018 | ID:scene0395_01_002160 | 时间:1.36s| 
+[GPU:0] | 样本:019 | ID:scene0717_00_000010 | 时间:1.36s| 
+[GPU:7] | 样本:279 | ID:scene0421_02_001320 | 时间:1.26s| 
+[GPU:2] | 样本:094 | ID:scene0061_01_001360 | 时间:1.33s| 
+[GPU:3] | 样本:131 | ID:scene0335_01_000070 | 时间:1.34s| 
+[GPU:5] | 样本:205 | ID:scene0223_00_000600 | 时间:1.35s| 
+[GPU:0] | 样本:020 | ID:scene0610_02_002780 | 时间:1.36s| 
+[GPU:4] | 样本:168 | ID:scene0552_01_000430 | 时间:1.36s| 
+[GPU:1] | 样本:057 | ID:scene0168_01_000100 | 时间:1.37s| 
+[GPU:6] | 样本:242 | ID:scene0192_02_000620 | 时间:1.38s| 
+[GPU:0] | 样本:021 | ID:scene0603_00_001590 | 时间:1.36s| 
+[GPU:0] | 样本:022 | ID:scene0610_02_000730 | 时间:1.36s| 
+[GPU:0] | 样本:023 | ID:scene0296_00_000040 | 时间:1.36s| 
+[GPU:0] | 样本:024 | ID:scene0241_00_000970 | 时间:1.36s| 
+[GPU:0] | 样本:025 | ID:scene0310_01_000630 | 时间:1.36s| 
+[GPU:0] | 样本:026 | ID:scene0157_00_000300 | 时间:1.36s| 
+[GPU:0] | 样本:027 | ID:scene0685_02_000840 | 时间:1.36s| 
+[GPU:0] | 样本:028 | ID:scene0780_00_000450 | 时间:1.36s| 
+[GPU:0] | 样本:029 | ID:scene0502_02_001130 | 时间:1.29s| 
+[GPU:7] | 样本:289 | ID:scene0142_00_000770 | 时间:1.25s| 
+[GPU:3] | 样本:141 | ID:scene0489_02_001010 | 时间:1.33s| 
+[GPU:2] | 样本:104 | ID:scene0702_01_000010 | 时间:1.34s| 
+[GPU:5] | 样本:215 | ID:scene0199_00_000110 | 时间:1.35s| 
+[GPU:0] | 样本:030 | ID:scene0670_01_000840 | 时间:1.35s| 
+[GPU:4] | 样本:178 | ID:scene0580_00_003200 | 时间:1.36s| 
+[GPU:1] | 样本:067 | ID:scene0114_00_000260 | 时间:1.37s| 
+[GPU:6] | 样本:252 | ID:scene0303_00_001250 | 时间:1.38s| 
+[GPU:0] | 样本:031 | ID:scene0177_00_000550 | 时间:1.36s| 
+[GPU:0] | 样本:032 | ID:scene0101_01_000410 | 时间:1.36s| 
+[GPU:0] | 样本:033 | ID:scene0457_02_000070 | 时间:1.36s| 
+[GPU:0] | 样本:034 | ID:scene0416_00_000950 | 时间:1.36s| 
+[GPU:0] | 样本:035 | ID:scene0628_00_000100 | 时间:1.36s| 
+[GPU:0] | 样本:036 | ID:scene0012_01_000160 | 时间:1.36s| 
+[rank3]:[W317 17:17:44.487769143 ProcessGroupNCCL.cpp:4561] [PG ID 0 PG GUID 0 Rank 3]  using GPU 3 to perform barrier as devices used by this process are currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect. Specify device_ids in barrier() to force use of a particular device, or call init_process_group() with a device_id.
+[rank2]:[W317 17:17:44.641546822 ProcessGroupNCCL.cpp:4561] [PG ID 0 PG GUID 0 Rank 2]  using GPU 2 to perform barrier as devices used by this process are currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect. Specify device_ids in barrier() to force use of a particular device, or call init_process_group() with a device_id.
+[GPU:0] | 样本:037 | ID:scene0740_00_000510 | 时间:1.36s| 
+[rank5]:[W317 17:17:44.073973966 ProcessGroupNCCL.cpp:4561] [PG ID 0 PG GUID 0 Rank 5]  using GPU 5 to perform barrier as devices used by this process are currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect. Specify device_ids in barrier() to force use of a particular device, or call init_process_group() with a device_id.
+[rank4]:[W317 17:17:45.324552418 ProcessGroupNCCL.cpp:4561] [PG ID 0 PG GUID 0 Rank 4]  using GPU 4 to perform barrier as devices used by this process are currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect. Specify device_ids in barrier() to force use of a particular device, or call init_process_group() with a device_id.
+[GPU:0] 数据集 scannet 部分结果:
+mean median rmse 5 7.5 11.25 22.5 30
+13.906 7.185 22.345 34.657 51.755 66.404 82.500 87.368
+[rank0]:[W317 17:17:45.345975260 ProcessGroupNCCL.cpp:4561] [PG ID 0 PG GUID 0 Rank 0]  using GPU 0 to perform barrier as devices used by this process are currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect. Specify device_ids in barrier() to force use of a particular device, or call init_process_group() with a device_id.
+NCCL version 2.21.5+cuda12.4
+[rank1]:[W317 17:17:45.723495394 ProcessGroupNCCL.cpp:4561] [PG ID 0 PG GUID 0 Rank 1]  using GPU 1 to perform barrier as devices used by this process are currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect. Specify device_ids in barrier() to force use of a particular device, or call init_process_group() with a device_id.
+[rank6]:[W317 17:17:45.090530024 ProcessGroupNCCL.cpp:4561] [PG ID 0 PG GUID 0 Rank 6]  using GPU 6 to perform barrier as devices used by this process are currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect. Specify device_ids in barrier() to force use of a particular device, or call init_process_group() with a device_id.
+[GPU:7] | 样本:299 | ID:scene0419_02_001480 | 时间:1.33s| 
+[rank7]:[W317 17:17:49.782526750 ProcessGroupNCCL.cpp:4561] [PG ID 0 PG GUID 0 Rank 7]  using GPU 7 to perform barrier as devices used by this process are currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect. Specify device_ids in barrier() to force use of a particular device, or call init_process_group() with a device_id.
+
+合并数据集 scannet 的结果...
+数据集 scannet 最终结果:
+mean median rmse 5 7.5 11.25 22.5 30
+13.817 6.952 22.539 35.720 53.152 67.213 82.621 87.374
+结果已保存至: ./infer/eval_verify_scannet_normal_8gpu/LDRN/normal/scannet/eval_metrics.txt
+
+Normal评估总结已保存至: ./infer/eval_verify_scannet_normal_8gpu/LDRN/normal/LDRN_normal_summary.txt

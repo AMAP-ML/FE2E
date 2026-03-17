@@ -3,107 +3,191 @@
 [![Page](https://img.shields.io/badge/Project-Website-pink?logo=googlechrome&logoColor=white)](https://amap-ml.github.io/FE2E/)
 [![Paper](https://img.shields.io/badge/arXiv-2509.04338-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2509.04338)
 [![GitHub](https://img.shields.io/github/stars/AMAP-ML/FE2E?style=social)](https://github.com/AMAP-ML/FE2E)
-[![HuggingFace](https://img.shields.io/badge/🤗%20HuggingFace-Models-yellow)](https://huggingface.co/models?search=amap-ml/fe2e)
 
+![teaser](assets/demo.png)
 
-[Jiyuan Wang](https://wangjiyuan9.github.io/)<sup>1,2</sup>,
-[Chunyu Lin](https://scholar.google.com/citations?hl=zh-CN&user=t8xkhscAAAAJ)<sup>1&#9993;</sup>,
-[Lei Sun](https://scholar.google.com/citations?user=your-id)<sup>2&#10013;</sup>,
-[Rongying Liu](https://scholar.google.com/citations?user=your-id)<sup>1</sup>,
-[Mingxing Li](https://scholar.google.com/citations?user=-pfkprkAAAAJ&hl=zh-CN&oi=ao)<sup>2</sup>,
-[Lang Nie](https://scholar.google.com/citations?hl=zh-CN&user=vo__egkAAAAJ)<sup>3</sup>,
-[Kang Liao](https://kangliao929.github.io/)<sup>4</sup>,
-[Xiangxiang Chu](https://cxxgtxy.github.io/)<sup>2</sup>,
-[Yao Zhao](https://faculty.bjtu.edu.cn/5900/)<sup>1</sup>
+This repository currently provides the FE2E inference and benchmark-evaluation package built on top of Step1X-Edit. It is intended for reproducing the released depth/normal evaluation workflow, while keeping large datasets and model checkpoints outside git.
 
-<span class="author-block"><sup>1</sup>Beijing Jiaotong University</span>
-<span class="author-block"><sup>2</sup>Alibaba Group</span>
-<span class="author-block"><sup>3</sup>Chongqing University of Posts and Telecommunications</span>
-<span class="author-block"><sup>4</sup>Nanyang Technological University</span><br>
-<span class="author-block">
-    <sup>&#9993;</sup>Corresponding author.
-    <sup>&#10013;</sup>Project leader.
-</span>
-
-<br>
-
-![teaser](https://github.com/AMAP-ML/FE2E/raw/main/demo.png)
-
-We present **FE2E**, a DiT-based foundation model for monocular dense geometry prediction. We pioneer the adaptation of an advanced image editing model for dense geometry prediction, revealing that editing models possess inherent structural priors beneficial for these tasks. With limited supervision (71K images), **FE2E** achieves significant performance improvements in zero-shot depth and normal estimation.
-
-![teaser2](https://github.com/AMAP-ML/FE2E/raw/main/pipeline.png)
+![pipeline](assets/pipeline.png)
 
 ## 📢 News
-- **[2026-03-18]**: Release the model and Inference Code.
+
+- **[2026-03-17]**: Inference and evaluation code are organized for public use, with benchmark configs/splits and example run logs.
 - **[2025-09-05]**: Paper released on [arXiv](https://arxiv.org/abs/2509.04338).
 
 ---
 
+## 📦 What Is Released
+
+Currently included in this repository:
+
+- FE2E evaluation entrypoint: `evaluation.py`
+- FE2E inference entrypoint: `infer/inference.py`
+- benchmark dataset loaders, configs, and split files
+- README and example logs under `logs/`
+
+Not included in git:
+
+- benchmark dataset payloads
+- Step1X-Edit base model checkpoints
+- FE2E LoRA checkpoint files
+- training code
+
+---
+
 ## 🛠️ Setup
-This code was tested on Ubuntu 20.04, Python 3.10, and CUDA 12.1.
 
-1.  **Clone the repository:**
-    ```bash
-    git clone https://github.com/AMAP-ML/FE2E.git
-    cd FE2E
-    ```
+This code is expected to run in a Python environment with the dependencies from:
 
-2.  **Install dependencies:** We recommend using `conda` for environment management.
-    ```bash
-    Dependencies will release soon.
-    ```
+```bash
+pip install -r requirements.txt
+```
+
+Useful runtime flags already supported in this repo:
+
+- `--eval_data_root`: explicit benchmark data root for `evaluation.py`
+- `--empty_prompt_cache`: cache path for empty-prompt inference in `infer/inference.py`
+- `MASTER_PORT`: can be set externally to avoid port conflicts across jobs
+
+Supported benchmarks:
+
+- Depth: `nyu_v2`, `kitti`, `eth3d`, `diode`, `scannet`
+- Normal: `nyuv2`, `scannet`, `ibims`, `sintel`, `oasis`, `hypersim`
 
 ---
 
 ## 🔥 Training
-1.  **Initialize Accelerate Environment:**
-    ```bash
-    accelerate config
-    ```
 
-2.  **Prepare Training Data:**
-    Please refer to our paper for details on the training datasets. After downloading, organize the data as specified in the configuration files and update the corresponding paths.
-
-3.  **Run Training Script:**
-    To train the FE2E model for joint depth and normal estimation, run the training script:
-
-     Script will release soon.
+- [ ] Training code is not included in this release yet.
 
 ---
 
-## 🕹️ Inference
+## 🕹️ Inference and Evaluation
 
-### Testing on Your Images
-1.  Place your images in a directory, for example, `assets/examples`.
-2.  Run the inference script. Our model jointly predicts depth and normals.
+### External Weights and Data
 
-    Script will release soon.
+This repo keeps only code. We recommend mounting weights and benchmark data into the following paths:
 
-### Evaluation on Benchmark Datasets
-1.  **Prepare Benchmark Datasets:**
-    -   For **depth** estimation, download the evaluation datasets provided by [Marigold](https://github.com/prs-eth/Marigold?tab=readme-ov-file#-evaluation-on-test-datasets-):
-        ```bash
-        cd datasets/eval/depth/
-        wget -r -np -nH --cut-dirs=4 -R "index.html*" -P . [https://share.phys.ethz.ch/~pf/bingkedata/marigold/evaluation_dataset/](https://share.phys.ethz.ch/~pf/bingkedata/marigold/evaluation_dataset/)
-        ```
-    -   For **normal** estimation, download the evaluation datasets provided by [DSINE](https://github.com/baegwangbin/DSINE?tab=readme-ov-file#getting-started) (`dsine_eval.zip`) into `datasets/eval/normal/` and unzip it.
+```text
+FE2E/
+├── pretrain/
+│   ├── step1x-edit-i1258.safetensors
+│   ├── step1x-edit-v1p1-official.safetensors
+│   └── vae.safetensors
+├── lora/
+│   └── LDRN.safetensors
+├── infer/
+│   ├── eth3d/
+│   │   └── eth3d.tar
+│   └── dsine_eval/
+│       ├── nyuv2/
+│       └── scannet/
+└── logs/
+```
 
-2.  **Run Evaluation Script:**
-    Execute the evaluation script to assess the model's performance on the prepared benchmarks:
+In the current local setup, these paths are mounted via symlinks so the repository itself stays lightweight.
 
-    Script will release soon.
+### Model Sources
+
+- Step1X-Edit base weights should come from the official [Step1X-Edit](https://github.com/stepfun-ai/Step1X-Edit) release.
+- FE2E evaluation currently loads the FE2E LoRA checkpoint through `--lora`.
+- This repository does not redistribute model weights inside git.
+
+### Benchmark Data Sources
+
+- Depth benchmarks follow the external evaluation data convention used by [Marigold](https://github.com/prs-eth/Marigold).
+- Normal benchmarks follow the external evaluation data convention used by [DSINE](https://github.com/baegwangbin/DSINE).
+- This repository does not redistribute benchmark data inside git.
+
+### Run Evaluation
+
+`ScanNet normal`:
+
+```bash
+CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7 \
+MASTER_PORT=21258 \
+PYTHONUNBUFFERED=1 \
+python -u evaluation.py \
+  --model_path ./pretrain \
+  --eval_data_root ./infer \
+  --output_dir ./infer/eval_verify_scannet_normal_8gpu \
+  --num_gpus 8 \
+  --num_samples -1 \
+  --lora ./lora/LDRN.safetensors \
+  --single_denoise \
+  --prompt_type empty \
+  --norm_type ln \
+  --task_name normal \
+  --normal_eval_datasets scannet
+```
+
+Expected result:
+
+- `mean ≈ 13.8166`
+- `11.25° ≈ 67.2134`
+
+`ETH3D depth`:
+
+```bash
+CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7 \
+MASTER_PORT=21257 \
+PYTHONUNBUFFERED=1 \
+python -u evaluation.py \
+  --model_path ./pretrain \
+  --eval_data_root ./infer \
+  --output_dir ./infer/eval_verify_eth3d_8gpu \
+  --num_gpus 8 \
+  --num_samples -1 \
+  --lora ./lora/LDRN.safetensors \
+  --single_denoise \
+  --prompt_type empty \
+  --norm_type ln \
+  --task_name depth \
+  --depth_eval_datasets eth3d
+```
+
+Expected result:
+
+- `abs_rel ≈ 0.0379`
+- `sq_rel ≈ 0.0520`
+- `rmse ≈ 0.4701`
+- `rmse_log ≈ 0.0546`
+- `a1 ≈ 0.9877`
+
+For multiple datasets, pass a comma-separated list to `--depth_eval_datasets` or `--normal_eval_datasets`.
 
 ---
 
-## 🤗 Model Zoo
-Below are the official models released. Our framework jointly estimates depth and normals in a single forward pass.
+## 🧾 Example Logs
 
-Model will release soon.
+The `logs/` directory contains successful 8-GPU verification logs that show normal per-sample progress and final metric summaries:
+
+- `logs/verify_scannet_normal_8gpu_20260317_171345.log`
+- `logs/verify_eth3d_8gpu_20260317_172004.log`
+
+Verified summaries:
+
+- ScanNet normal: `mean = 13.8166`, `11.25° = 67.2134`
+- ETH3D depth: `abs_rel = 0.0379`, `sq_rel = 0.0520`, `rmse = 0.4701`, `rmse_log = 0.0546`, `a1 = 0.9877`, `a2 = 0.9966`, `a3 = 0.9985`
+
+These logs are included to show what a normal run looks like after the code and paths are set up correctly.
+
+---
+
+## 🤗 Release Status
+
+- Inference/evaluation code: released in this repository
+- Benchmark configs/splits: released in this repository
+- Example verification logs: released in this repository
+- Training code: not released here yet
+- Model weights and benchmark datasets: external assets, not tracked in git
 
 ---
 
 ## 🎓 Citation
+
 If you find our work useful in your research, please consider citing our paper:
+
 ```bibtex
 @article{wang2025editor,
   title={From Editor to Dense Geometry Estimator},
@@ -111,3 +195,4 @@ If you find our work useful in your research, please consider citing our paper:
   journal={arXiv preprint arXiv:2509.04338},
   year={2025}
 }
+```

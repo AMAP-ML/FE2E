@@ -1,0 +1,1442 @@
+即将使用 8 个GPU进行并行推理...
+Depth评估数据集: ['eth3d']
+[INFO] prompt_type=empty, 跳过Qwen模型加载
+[INFO] prompt_type=empty, 跳过Qwen模型加载
+[INFO] prompt_type=empty, 跳过Qwen模型加载
+[INFO] prompt_type=empty, 跳过Qwen模型加载
+[main_worker] 开始加载 pipeline, device=cuda:0, datasets=['eth3d']
+[INFO] prompt_type=empty, 跳过Qwen模型加载
+[INFO] prompt_type=empty, 跳过Qwen模型加载
+[INFO] prompt_type=empty, 跳过Qwen模型加载
+[INFO] prompt_type=empty, 跳过Qwen模型加载
+create LoRA network from weights
+train all blocks only
+create LoRA network from weights
+train all blocks only
+create LoRA network from weights
+train all blocks only
+create LoRA network from weights
+train all blocks only
+create LoRA network from weights
+train all blocks only
+create LoRA network from weights
+train all blocks only
+create LoRA network from weights
+train all blocks only
+create LoRA network from weights
+train all blocks only
+create LoRA for DIT all blocks: 304 modules.
+enable LoRA for U-Net
+create LoRA for DIT all blocks: 304 modules.
+enable LoRA for U-Net
+weights are merged
+create LoRA for DIT all blocks: 304 modules.
+enable LoRA for U-Net
+create LoRA for DIT all blocks: 304 modules.
+enable LoRA for U-Net
+create LoRA for DIT all blocks: 304 modules.
+enable LoRA for U-Net
+weights are merged
+create LoRA for DIT all blocks: 304 modules.
+enable LoRA for U-Net
+create LoRA for DIT all blocks: 304 modules.
+enable LoRA for U-Net
+create LoRA for DIT all blocks: 304 modules.
+enable LoRA for U-Net
+weights are merged
+weights are merged
+weights are merged
+weights are merged
+weights are merged
+weights are merged
+Successfully loading pipeline from /mmu_mllm_hdd_2/wjy/Step1X-Edit/pretrain.
+模型标识符: LDRN
+
+开始评估数据集: eth3d
+输出目录: ./infer/eval_verify_eth3d_8gpu/LDRN/eth3d
+================================================================================
+[GPU:2] 样本:113/454 | ID:DSC_0363.JPG
+  CFG=1: abs_rel:0.0250 | rmse:0.3425 | a1:0.9997
+  时间: 5.63s
+[GPU:7] 样本:393/454 | ID:DSC_6559.JPG
+  CFG=1: abs_rel:0.0282 | rmse:0.3350 | a1:0.9982
+  时间: 5.60s
+[GPU:2] 样本:114/454 | ID:DSC_0387.JPG
+  CFG=1: abs_rel:0.0287 | rmse:0.5338 | a1:0.9992
+  时间: 1.06s
+[GPU:7] 样本:394/454 | ID:DSC_9287.JPG
+  CFG=1: abs_rel:0.0195 | rmse:0.3558 | a1:0.9996
+  时间: 1.06s
+[GPU:5] 样本:281/454 | ID:DSC_0679.JPG
+  CFG=1: abs_rel:0.0213 | rmse:0.2297 | a1:0.9996
+  时间: 5.92s
+[GPU:4] 样本:225/454 | ID:DSC_0582.JPG
+  CFG=1: abs_rel:0.0419 | rmse:0.4228 | a1:0.9923
+  时间: 5.56s
+[GPU:6] 样本:337/454 | ID:DSC_0717.JPG
+  CFG=1: abs_rel:0.0335 | rmse:1.3345 | a1:0.9940
+  时间: 5.41s
+[GPU:0] 样本:001/454 | ID:DSC_0262.JPG
+  CFG=1: abs_rel:0.0186 | rmse:0.1223 | a1:0.9995
+  时间: 5.87s
+[GPU:1] 样本:057/454 | ID:DSC_0348.JPG
+  CFG=1: abs_rel:0.0329 | rmse:0.7702 | a1:0.9956
+  时间: 5.27s
+[GPU:2] 样本:115/454 | ID:DSC_0358.JPG
+  CFG=1: abs_rel:0.0532 | rmse:0.9252 | a1:0.9873
+  时间: 1.06s
+[GPU:7] 样本:395/454 | ID:DSC_6547.JPG
+  CFG=1: abs_rel:0.0272 | rmse:0.4811 | a1:0.9903
+  时间: 1.06s
+[GPU:5] 样本:282/454 | ID:DSC_0650.JPG
+  CFG=1: abs_rel:0.0418 | rmse:0.3949 | a1:0.9912
+  时间: 1.07s
+[GPU:4] 样本:226/454 | ID:DSC_0598.JPG
+  CFG=1: abs_rel:0.0531 | rmse:0.6518 | a1:0.9802
+  时间: 1.05s
+[GPU:0] 样本:002/454 | ID:DSC_0259.JPG
+  CFG=1: abs_rel:0.0488 | rmse:1.7162 | a1:0.9972
+  时间: 1.05s
+[GPU:1] 样本:058/454 | ID:DSC_0335.JPG
+  CFG=1: abs_rel:0.0320 | rmse:0.6190 | a1:0.9992
+  时间: 1.05s
+[GPU:6] 样本:338/454 | ID:DSC_6500.JPG
+  CFG=1: abs_rel:0.0180 | rmse:0.0906 | a1:0.9995
+  时间: 1.07s
+[GPU:3] 样本:169/454 | ID:DSC_0436.JPG
+  CFG=1: abs_rel:0.0272 | rmse:0.1492 | a1:0.9991
+  时间: 4.66s
+[GPU:2] 样本:116/454 | ID:DSC_0354.JPG
+  CFG=1: abs_rel:0.0203 | rmse:0.3947 | a1:0.9987
+  时间: 1.05s
+[GPU:7] 样本:396/454 | ID:DSC_6519.JPG
+  CFG=1: abs_rel:0.0282 | rmse:0.0958 | a1:0.9986
+  时间: 1.04s
+[GPU:4] 样本:227/454 | ID:DSC_0603.JPG
+  CFG=1: abs_rel:0.0834 | rmse:0.7150 | a1:0.9629
+  时间: 1.07s
+[GPU:2] 样本:117/454 | ID:DSC_0420.JPG
+  CFG=1: abs_rel:0.0201 | rmse:0.2986 | a1:0.9998
+  时间: 0.99s
+[GPU:5] 样本:283/454 | ID:DSC_0658.JPG
+  CFG=1: abs_rel:0.0350 | rmse:0.2123 | a1:0.9933
+  时间: 1.08s
+[GPU:1] 样本:059/454 | ID:DSC_0305.JPG
+  CFG=1: abs_rel:0.0293 | rmse:0.5077 | a1:0.9998
+  时间: 1.06s
+[GPU:0] 样本:003/454 | ID:DSC_0270.JPG
+  CFG=1: abs_rel:0.0156 | rmse:0.1312 | a1:0.9988
+  时间: 1.01s
+[GPU:3] 样本:170/454 | ID:DSC_0457.JPG
+  CFG=1: abs_rel:0.0191 | rmse:0.2004 | a1:0.9994
+  时间: 1.05s
+[GPU:6] 样本:339/454 | ID:DSC_6506.JPG
+  CFG=1: abs_rel:0.0268 | rmse:0.1160 | a1:0.9999
+  时间: 1.06s
+[GPU:7] 样本:397/454 | ID:DSC_9283.JPG
+  CFG=1: abs_rel:0.0199 | rmse:0.1121 | a1:0.9995
+  时间: 1.05s
+[GPU:4] 样本:228/454 | ID:DSC_0616.JPG
+  CFG=1: abs_rel:0.0307 | rmse:0.0580 | a1:0.9997
+  时间: 1.06s
+[GPU:5] 样本:284/454 | ID:DSC_0635.JPG
+  CFG=1: abs_rel:0.0094 | rmse:0.0298 | a1:1.0000
+  时间: 1.07s
+[GPU:1] 样本:060/454 | ID:DSC_0295.JPG
+  CFG=1: abs_rel:0.0148 | rmse:0.1009 | a1:0.9998
+  时间: 1.07s
+[GPU:6] 样本:340/454 | ID:DSC_0699.JPG
+  CFG=1: abs_rel:0.0531 | rmse:1.8422 | a1:0.9902
+  时间: 1.07s
+[GPU:2] 样本:118/454 | ID:DSC_0409.JPG
+  CFG=1: abs_rel:0.0227 | rmse:0.5063 | a1:0.9978
+  时间: 1.06s
+[GPU:0] 样本:004/454 | ID:DSC_0276.JPG
+  CFG=1: abs_rel:0.0201 | rmse:0.3308 | a1:0.9996
+  时间: 1.08s
+[GPU:7] 样本:398/454 | ID:DSC_6541.JPG
+  CFG=1: abs_rel:0.0279 | rmse:0.7751 | a1:0.9842
+  时间: 1.06s
+[GPU:3] 样本:171/454 | ID:DSC_0442.JPG
+  CFG=1: abs_rel:0.0090 | rmse:0.0440 | a1:1.0000
+  时间: 1.06s
+[GPU:4] 样本:229/454 | ID:DSC_0618.JPG
+  CFG=1: abs_rel:0.0317 | rmse:0.0576 | a1:0.9988
+  时间: 1.07s
+[GPU:5] 样本:285/454 | ID:DSC_0690.JPG
+  CFG=1: abs_rel:0.0361 | rmse:0.5139 | a1:0.9986
+  时间: 1.06s
+[GPU:1] 样本:061/454 | ID:DSC_0298.JPG
+  CFG=1: abs_rel:0.0312 | rmse:0.1861 | a1:0.9990
+  时间: 1.07s
+[GPU:2] 样本:119/454 | ID:DSC_0389.JPG
+  CFG=1: abs_rel:0.0517 | rmse:0.9473 | a1:0.9770
+  时间: 1.09s
+[GPU:6] 样本:341/454 | ID:DSC_0715.JPG
+  CFG=1: abs_rel:0.0686 | rmse:1.6566 | a1:0.9938
+  时间: 1.07s
+[GPU:7] 样本:399/454 | ID:DSC_9276.JPG
+  CFG=1: abs_rel:0.0393 | rmse:0.6179 | a1:0.9828
+  时间: 1.07s
+[GPU:0] 样本:005/454 | ID:DSC_0229.JPG
+  CFG=1: abs_rel:0.0527 | rmse:0.1190 | a1:0.9997
+  时间: 1.07s
+[GPU:3] 样本:172/454 | ID:DSC_0484.JPG
+  CFG=1: abs_rel:0.0427 | rmse:0.2303 | a1:0.9998
+  时间: 0.94s
+[GPU:4] 样本:230/454 | ID:DSC_0569.JPG
+  CFG=1: abs_rel:0.0891 | rmse:0.4799 | a1:0.9499
+  时间: 0.99s
+[GPU:5] 样本:286/454 | ID:DSC_0640.JPG
+  CFG=1: abs_rel:0.0336 | rmse:0.1206 | a1:0.9931
+  时间: 1.11s
+[GPU:1] 样本:062/454 | ID:DSC_0332.JPG
+  CFG=1: abs_rel:0.0395 | rmse:0.6804 | a1:0.9989
+  时间: 1.07s
+[GPU:2] 样本:120/454 | ID:DSC_0360.JPG
+  CFG=1: abs_rel:0.0395 | rmse:0.7538 | a1:0.9947
+  时间: 1.06s
+[GPU:6] 样本:342/454 | ID:DSC_6497.JPG
+  CFG=1: abs_rel:0.0157 | rmse:0.0924 | a1:0.9995
+  时间: 1.07s
+[GPU:7] 样本:400/454 | ID:DSC_9297.JPG
+  CFG=1: abs_rel:0.0325 | rmse:0.1190 | a1:0.9993
+  时间: 1.09s
+[GPU:0] 样本:006/454 | ID:DSC_0284.JPG
+  CFG=1: abs_rel:0.0374 | rmse:0.7863 | a1:0.9953
+  时间: 1.08s
+[GPU:4] 样本:231/454 | ID:DSC_0626.JPG
+  CFG=1: abs_rel:0.0118 | rmse:0.0220 | a1:1.0000
+  时间: 1.07s
+[GPU:3] 样本:173/454 | ID:DSC_0465.JPG
+  CFG=1: abs_rel:0.0378 | rmse:0.1698 | a1:1.0000
+  时间: 1.04s
+[GPU:1] 样本:063/454 | ID:DSC_0303.JPG
+  CFG=1: abs_rel:0.0338 | rmse:0.5443 | a1:0.9998
+  时间: 1.07s
+[GPU:5] 样本:287/454 | ID:DSC_0668.JPG
+  CFG=1: abs_rel:0.0276 | rmse:0.2423 | a1:0.9990
+  时间: 1.06s
+[GPU:6] 样本:343/454 | ID:DSC_0693.JPG
+  CFG=1: abs_rel:0.0299 | rmse:0.8802 | a1:0.9919
+  时间: 1.05s
+[GPU:2] 样本:121/454 | ID:DSC_0427.JPG
+  CFG=1: abs_rel:0.0419 | rmse:0.1926 | a1:0.9982
+  时间: 1.06s
+[GPU:7] 样本:401/454 | ID:DSC_9267.JPG
+  CFG=1: abs_rel:0.0198 | rmse:0.4571 | a1:0.9979
+  时间: 1.06s
+[GPU:0] 样本:007/454 | ID:DSC_0243.JPG
+  CFG=1: abs_rel:0.0270 | rmse:0.0868 | a1:0.9984
+  时间: 1.03s
+[GPU:4] 样本:232/454 | ID:DSC_0578.JPG
+  CFG=1: abs_rel:0.0660 | rmse:0.5535 | a1:0.9765
+  时间: 1.08s
+[GPU:1] 样本:064/454 | ID:DSC_0324.JPG
+  CFG=1: abs_rel:0.0245 | rmse:0.4824 | a1:0.9998
+  时间: 1.08s
+[GPU:3] 样本:174/454 | ID:DSC_0451.JPG
+  CFG=1: abs_rel:0.0257 | rmse:1.4905 | a1:0.9923
+  时间: 1.05s
+[GPU:6] 样本:344/454 | ID:DSC_6493.JPG
+  CFG=1: abs_rel:0.0236 | rmse:0.0842 | a1:0.9996
+  时间: 1.05s
+[GPU:5] 样本:288/454 | ID:DSC_0678.JPG
+  CFG=1: abs_rel:0.0271 | rmse:0.2599 | a1:0.9998
+  时间: 1.09s
+[GPU:2] 样本:122/454 | ID:DSC_0364.JPG
+  CFG=1: abs_rel:0.0343 | rmse:0.6719 | a1:0.9892
+  时间: 1.14s
+[GPU:7] 样本:402/454 | ID:DSC_9296.JPG
+  CFG=1: abs_rel:0.0241 | rmse:0.1382 | a1:0.9995
+  时间: 1.12s
+[GPU:4] 样本:233/454 | ID:DSC_0599.JPG
+  CFG=1: abs_rel:0.0501 | rmse:0.5273 | a1:0.9790
+  时间: 1.04s
+[GPU:0] 样本:008/454 | ID:DSC_0220.JPG
+  CFG=1: abs_rel:0.0300 | rmse:0.0809 | a1:0.9995
+  时间: 1.06s
+[GPU:1] 样本:065/454 | ID:DSC_0341.JPG
+  CFG=1: abs_rel:0.0264 | rmse:0.6364 | a1:0.9962
+  时间: 1.05s
+[GPU:3] 样本:175/454 | ID:DSC_0447.JPG
+  CFG=1: abs_rel:0.0150 | rmse:0.3378 | a1:0.9984
+  时间: 1.04s
+[GPU:5] 样本:289/454 | ID:DSC_0636.JPG
+  CFG=1: abs_rel:0.0137 | rmse:0.0400 | a1:1.0000
+  时间: 1.07s
+[GPU:2] 样本:123/454 | ID:DSC_0402.JPG
+  CFG=1: abs_rel:0.0616 | rmse:1.0368 | a1:0.9819
+  时间: 1.08s
+[GPU:6] 样本:345/454 | ID:DSC_6509.JPG
+  CFG=1: abs_rel:0.0380 | rmse:0.1517 | a1:0.9996
+  时间: 1.05s
+[GPU:4] 样本:234/454 | ID:DSC_0595.JPG
+  CFG=1: abs_rel:0.0704 | rmse:1.0380 | a1:0.9777
+  时间: 1.08s
+[GPU:7] 样本:403/454 | ID:DSC_9258.JPG
+  CFG=1: abs_rel:0.0201 | rmse:0.1828 | a1:0.9985
+  时间: 1.06s
+[GPU:1] 样本:066/454 | ID:DSC_0293.JPG
+  CFG=1: abs_rel:0.0164 | rmse:0.1162 | a1:0.9990
+  时间: 1.07s
+[GPU:0] 样本:009/454 | ID:DSC_0278.JPG
+  CFG=1: abs_rel:0.0314 | rmse:1.1386 | a1:0.9987
+  时间: 1.08s
+[GPU:5] 样本:290/454 | ID:DSC_0683.JPG
+  CFG=1: abs_rel:0.0334 | rmse:0.3600 | a1:0.9991
+  时间: 1.00s
+[GPU:3] 样本:176/454 | ID:DSC_0433.JPG
+  CFG=1: abs_rel:0.0263 | rmse:0.1104 | a1:1.0000
+  时间: 1.05s
+[GPU:6] 样本:346/454 | ID:DSC_0700.JPG
+  CFG=1: abs_rel:0.0661 | rmse:2.0336 | a1:0.9821
+  时间: 1.07s
+[GPU:4] 样本:235/454 | ID:DSC_0567.JPG
+  CFG=1: abs_rel:0.0519 | rmse:0.4385 | a1:0.9811
+  时间: 1.06s
+[GPU:2] 样本:124/454 | ID:DSC_0431.JPG
+  CFG=1: abs_rel:0.0241 | rmse:0.1014 | a1:1.0000
+  时间: 1.08s
+[GPU:7] 样本:404/454 | ID:DSC_9284.JPG
+  CFG=1: abs_rel:0.0261 | rmse:0.4681 | a1:0.9977
+  时间: 1.01s
+[GPU:0] 样本:010/454 | ID:DSC_0285.JPG
+  CFG=1: abs_rel:0.0471 | rmse:0.8400 | a1:0.9950
+  时间: 1.06s
+[GPU:1] 样本:067/454 | ID:DSC_0339.JPG
+  CFG=1: abs_rel:0.0293 | rmse:0.6138 | a1:0.9957
+  时间: 1.07s
+[GPU:5] 样本:291/454 | ID:DSC_0646.JPG
+  CFG=1: abs_rel:0.0299 | rmse:0.1269 | a1:0.9995
+  时间: 1.08s
+[GPU:6] 样本:347/454 | ID:DSC_6510.JPG
+  CFG=1: abs_rel:0.0309 | rmse:0.0982 | a1:0.9997
+  时间: 1.07s
+[GPU:4] 样本:236/454 | ID:DSC_0622.JPG
+  CFG=1: abs_rel:0.0260 | rmse:0.0512 | a1:1.0000
+  时间: 1.06s
+[GPU:2] 样本:125/454 | ID:DSC_0421.JPG
+  CFG=1: abs_rel:0.0567 | rmse:2.2512 | a1:0.9865
+  时间: 1.06s
+[GPU:3] 样本:177/454 | ID:DSC_0464.JPG
+  CFG=1: abs_rel:0.0226 | rmse:0.1096 | a1:1.0000
+  时间: 1.09s
+[GPU:7] 样本:405/454 | ID:DSC_6520.JPG
+  CFG=1: abs_rel:0.0360 | rmse:0.1507 | a1:0.9989
+  时间: 1.06s
+[GPU:0] 样本:011/454 | ID:DSC_0289.JPG
+  CFG=1: abs_rel:0.0233 | rmse:0.1701 | a1:0.9989
+  时间: 1.07s
+[GPU:5] 样本:292/454 | ID:DSC_0643.JPG
+  CFG=1: abs_rel:0.0429 | rmse:0.1182 | a1:0.9999
+  时间: 1.07s
+[GPU:1] 样本:068/454 | ID:DSC_0318.JPG
+  CFG=1: abs_rel:0.0190 | rmse:0.2287 | a1:0.9997
+  时间: 1.06s
+[GPU:6] 样本:348/454 | ID:DSC_6499.JPG
+  CFG=1: abs_rel:0.0214 | rmse:0.1100 | a1:0.9997
+  时间: 1.05s
+[GPU:4] 样本:237/454 | ID:DSC_0623.JPG
+  CFG=1: abs_rel:0.0251 | rmse:0.0495 | a1:1.0000
+  时间: 1.05s
+[GPU:2] 样本:126/454 | ID:DSC_0398.JPG
+  CFG=1: abs_rel:0.0480 | rmse:0.9587 | a1:0.9801
+  时间: 1.10s
+[GPU:3] 样本:178/454 | ID:DSC_0449.JPG
+  CFG=1: abs_rel:0.0264 | rmse:0.7301 | a1:0.9963
+  时间: 1.10s
+[GPU:7] 样本:406/454 | ID:DSC_9279.JPG
+  CFG=1: abs_rel:0.0223 | rmse:0.1223 | a1:1.0000
+  时间: 1.05s
+[GPU:5] 样本:293/454 | ID:DSC_0649.JPG
+  CFG=1: abs_rel:0.0436 | rmse:0.3429 | a1:0.9921
+  时间: 1.07s
+[GPU:0] 样本:012/454 | ID:DSC_0236.JPG
+  CFG=1: abs_rel:0.0185 | rmse:0.0678 | a1:0.9984
+  时间: 1.07s
+[GPU:1] 样本:069/454 | ID:DSC_0340.JPG
+  CFG=1: abs_rel:0.0231 | rmse:0.5524 | a1:0.9957
+  时间: 1.07s
+[GPU:4] 样本:238/454 | ID:DSC_0576.JPG
+  CFG=1: abs_rel:0.0626 | rmse:0.6813 | a1:0.9826
+  时间: 1.06s
+[GPU:2] 样本:127/454 | ID:DSC_0365.JPG
+  CFG=1: abs_rel:0.0637 | rmse:1.8149 | a1:0.9703
+  时间: 1.13s
+[GPU:6] 样本:349/454 | ID:DSC_0698.JPG
+  CFG=1: abs_rel:0.0565 | rmse:1.6441 | a1:0.9815
+  时间: 1.07s
+[GPU:7] 样本:407/454 | ID:DSC_9302.JPG
+  CFG=1: abs_rel:0.0226 | rmse:0.2922 | a1:0.9988
+  时间: 1.05s
+[GPU:3] 样本:179/454 | ID:DSC_0452.JPG
+  CFG=1: abs_rel:0.0206 | rmse:0.2214 | a1:0.9996
+  时间: 1.04s
+[GPU:5] 样本:294/454 | ID:DSC_0682.JPG
+  CFG=1: abs_rel:0.0348 | rmse:0.3412 | a1:0.9992
+  时间: 1.08s
+[GPU:4] 样本:239/454 | ID:DSC_0568.JPG
+  CFG=1: abs_rel:0.0810 | rmse:0.4769 | a1:0.9609
+  时间: 1.06s
+[GPU:2] 样本:128/454 | ID:DSC_0361.JPG
+  CFG=1: abs_rel:0.0191 | rmse:0.3466 | a1:0.9999
+  时间: 1.08s
+[GPU:1] 样本:070/454 | ID:DSC_0346.JPG
+  CFG=1: abs_rel:0.0297 | rmse:0.5923 | a1:0.9971
+  时间: 1.06s
+[GPU:0] 样本:013/454 | ID:DSC_0222.JPG
+  CFG=1: abs_rel:0.0132 | rmse:0.0423 | a1:0.9998
+  时间: 1.10s
+[GPU:6] 样本:350/454 | ID:DSC_6516.JPG
+  CFG=1: abs_rel:0.0399 | rmse:0.1444 | a1:0.9992
+  时间: 1.07s
+[GPU:3] 样本:180/454 | ID:DSC_0476.JPG
+  CFG=1: abs_rel:0.0179 | rmse:0.4304 | a1:0.9965
+  时间: 1.07s
+[GPU:7] 样本:408/454 | ID:DSC_9274.JPG
+  CFG=1: abs_rel:0.0088 | rmse:0.0559 | a1:1.0000
+  时间: 1.10s
+[GPU:4] 样本:240/454 | ID:DSC_0571.JPG
+  CFG=1: abs_rel:0.1131 | rmse:0.5744 | a1:0.9286
+  时间: 1.06s
+[GPU:5] 样本:295/454 | ID:DSC_0647.JPG
+  CFG=1: abs_rel:0.0220 | rmse:0.0916 | a1:0.9998
+  时间: 1.07s
+[GPU:6] 样本:351/454 | ID:DSC_0701.JPG
+  CFG=1: abs_rel:0.0477 | rmse:1.5600 | a1:0.9920
+  时间: 1.06s
+[GPU:1] 样本:071/454 | ID:DSC_0306.JPG
+  CFG=1: abs_rel:0.0170 | rmse:0.2558 | a1:0.9998
+  时间: 1.08s
+[GPU:2] 样本:129/454 | ID:DSC_0404.JPG
+  CFG=1: abs_rel:0.1116 | rmse:1.5929 | a1:0.9362
+  时间: 1.08s
+[GPU:0] 样本:014/454 | ID:DSC_0252.JPG
+  CFG=1: abs_rel:0.0364 | rmse:0.0807 | a1:0.9994
+  时间: 1.08s
+[GPU:4] 样本:241/454 | ID:DSC_0584.JPG
+  CFG=1: abs_rel:0.0786 | rmse:0.7184 | a1:0.9471
+  时间: 1.05s
+[GPU:7] 样本:409/454 | ID:DSC_9263.JPG
+  CFG=1: abs_rel:0.0283 | rmse:0.5611 | a1:0.9890
+  时间: 1.07s
+[GPU:3] 样本:181/454 | ID:DSC_0455.JPG
+  CFG=1: abs_rel:0.0220 | rmse:0.2556 | a1:0.9994
+  时间: 1.05s
+[GPU:5] 样本:296/454 | ID:DSC_0676.JPG
+  CFG=1: abs_rel:0.0182 | rmse:0.2472 | a1:0.9973
+  时间: 1.08s
+[GPU:6] 样本:352/454 | ID:DSC_6512.JPG
+  CFG=1: abs_rel:0.0305 | rmse:0.0859 | a1:0.9996
+  时间: 1.06s
+[GPU:0] 样本:015/454 | ID:DSC_0248.JPG
+  CFG=1: abs_rel:0.0259 | rmse:0.0870 | a1:0.9991
+  时间: 1.08s
+[GPU:1] 样本:072/454 | ID:DSC_0333.JPG
+  CFG=1: abs_rel:0.0345 | rmse:0.6351 | a1:0.9993
+  时间: 1.06s
+[GPU:2] 样本:130/454 | ID:DSC_0349.JPG
+  CFG=1: abs_rel:0.0442 | rmse:1.0633 | a1:0.9917
+  时间: 1.09s
+[GPU:4] 样本:242/454 | ID:DSC_0585.JPG
+  CFG=1: abs_rel:0.0684 | rmse:0.8505 | a1:0.9770
+  时间: 1.06s
+[GPU:7] 样本:410/454 | ID:DSC_9290.JPG
+  CFG=1: abs_rel:0.7042 | rmse:4.8550 | a1:0.1599
+  时间: 1.06s
+[GPU:5] 样本:297/454 | ID:DSC_0637.JPG
+  CFG=1: abs_rel:0.0229 | rmse:0.0664 | a1:0.9998
+  时间: 1.07s
+[GPU:6] 样本:353/454 | ID:DSC_6511.JPG
+  CFG=1: abs_rel:0.0295 | rmse:0.0856 | a1:0.9998
+  时间: 1.04s
+[GPU:2] 样本:131/454 | ID:DSC_0359.JPG
+  CFG=1: abs_rel:0.0686 | rmse:1.2656 | a1:0.9918
+  时间: 1.08s
+[GPU:3] 样本:182/454 | ID:DSC_0441.JPG
+  CFG=1: abs_rel:0.0114 | rmse:0.0568 | a1:1.0000
+  时间: 1.05s
+[GPU:0] 样本:016/454 | ID:DSC_0269.JPG
+  CFG=1: abs_rel:0.0204 | rmse:0.1568 | a1:0.9993
+  时间: 1.06s
+[GPU:1] 样本:073/454 | ID:DSC_0311.JPG
+  CFG=1: abs_rel:0.0236 | rmse:0.4260 | a1:0.9994
+  时间: 1.06s
+[GPU:7] 样本:411/454 | ID:DSC_6535.JPG
+  CFG=1: abs_rel:0.0397 | rmse:0.4867 | a1:0.9976
+  时间: 1.06s
+[GPU:5] 样本:298/454 | ID:DSC_0677.JPG
+  CFG=1: abs_rel:0.0308 | rmse:0.3459 | a1:0.9984
+  时间: 1.06s
+[GPU:4] 样本:243/454 | ID:DSC_0620.JPG
+  CFG=1: abs_rel:0.0311 | rmse:0.0556 | a1:0.9998
+  时间: 1.06s
+[GPU:6] 样本:354/454 | ID:DSC_6494.JPG
+  CFG=1: abs_rel:0.0246 | rmse:0.0846 | a1:0.9975
+  时间: 1.05s
+[GPU:2] 样本:132/454 | ID:DSC_0406.JPG
+  CFG=1: abs_rel:0.0787 | rmse:1.2296 | a1:0.9791
+  时间: 1.10s
+[GPU:3] 样本:183/454 | ID:DSC_0480.JPG
+  CFG=1: abs_rel:0.0225 | rmse:0.6617 | a1:0.9946
+  时间: 1.08s
+[GPU:1] 样本:074/454 | ID:DSC_0296.JPG
+  CFG=1: abs_rel:0.0146 | rmse:0.1035 | a1:0.9997
+  时间: 1.14s
+[GPU:0] 样本:017/454 | ID:DSC_0279.JPG
+  CFG=1: abs_rel:0.0486 | rmse:1.5071 | a1:0.9971
+  时间: 1.08s
+[GPU:5] 样本:299/454 | ID:DSC_0691.JPG
+  CFG=1: abs_rel:0.0549 | rmse:0.7419 | a1:0.9994
+  时间: 1.09s
+[GPU:4] 样本:244/454 | ID:DSC_0617.JPG
+  CFG=1: abs_rel:0.0335 | rmse:0.0587 | a1:0.9993
+  时间: 1.06s
+[GPU:6] 样本:355/454 | ID:DSC_0711.JPG
+  CFG=1: abs_rel:0.0537 | rmse:0.8782 | a1:0.9819
+  时间: 1.05s
+[GPU:7] 样本:412/454 | ID:DSC_9273.JPG
+  CFG=1: abs_rel:0.0221 | rmse:0.1779 | a1:0.9995
+  时间: 1.06s
+[GPU:1] 样本:075/454 | ID:DSC_0302.JPG
+  CFG=1: abs_rel:0.0250 | rmse:0.4334 | a1:0.9996
+  时间: 1.07s
+[GPU:2] 样本:133/454 | ID:DSC_0350.JPG
+  CFG=1: abs_rel:0.0350 | rmse:0.9132 | a1:0.9919
+  时间: 1.11s
+[GPU:3] 样本:184/454 | ID:DSC_0438.JPG
+  CFG=1: abs_rel:0.0439 | rmse:0.2011 | a1:0.9963
+  时间: 1.03s
+[GPU:0] 样本:018/454 | ID:DSC_0277.JPG
+  CFG=1: abs_rel:0.0224 | rmse:0.4107 | a1:0.9996
+  时间: 1.07s
+[GPU:4] 样本:245/454 | ID:DSC_0606.JPG
+  CFG=1: abs_rel:0.0778 | rmse:0.8213 | a1:0.9697
+  时间: 1.07s
+[GPU:6] 样本:356/454 | ID:DSC_0706.JPG
+  CFG=1: abs_rel:0.0521 | rmse:0.3384 | a1:0.9999
+  时间: 1.05s
+[GPU:5] 样本:300/454 | ID:DSC_0656.JPG
+  CFG=1: abs_rel:0.0415 | rmse:0.1761 | a1:0.9776
+  时间: 1.08s
+[GPU:7] 样本:413/454 | ID:DSC_6558.JPG
+  CFG=1: abs_rel:0.0210 | rmse:0.3137 | a1:0.9984
+  时间: 1.05s
+[GPU:1] 样本:076/454 | ID:DSC_0328.JPG
+  CFG=1: abs_rel:0.0326 | rmse:0.5015 | a1:0.9986
+  时间: 1.07s
+[GPU:2] 样本:134/454 | ID:DSC_0395.JPG
+  CFG=1: abs_rel:0.0288 | rmse:1.7256 | a1:0.9852
+  时间: 1.09s
+[GPU:3] 样本:185/454 | ID:DSC_0478.JPG
+  CFG=1: abs_rel:0.0309 | rmse:0.6131 | a1:0.9935
+  时间: 1.08s
+[GPU:4] 样本:246/454 | ID:DSC_0604.JPG
+  CFG=1: abs_rel:0.0811 | rmse:0.5267 | a1:0.9543
+  时间: 1.04s
+[GPU:0] 样本:019/454 | ID:DSC_0264.JPG
+  CFG=1: abs_rel:0.0231 | rmse:0.1433 | a1:0.9996
+  时间: 1.06s
+[GPU:5] 样本:301/454 | ID:DSC_0685.JPG
+  CFG=1: abs_rel:0.0321 | rmse:0.4290 | a1:0.9960
+  时间: 1.08s
+[GPU:6] 样本:357/454 | ID:DSC_0716.JPG
+  CFG=1: abs_rel:0.0417 | rmse:1.4240 | a1:0.9958
+  时间: 1.07s
+[GPU:7] 样本:414/454 | ID:DSC_9282.JPG
+  CFG=1: abs_rel:0.0105 | rmse:0.0659 | a1:1.0000
+  时间: 1.05s
+[GPU:1] 样本:077/454 | ID:DSC_0320.JPG
+  CFG=1: abs_rel:0.0184 | rmse:0.4294 | a1:0.9979
+  时间: 1.05s
+[GPU:2] 样本:135/454 | ID:DSC_0391.JPG
+  CFG=1: abs_rel:0.0196 | rmse:0.4944 | a1:0.9971
+  时间: 1.06s
+[GPU:4] 样本:247/454 | ID:DSC_0489.JPG
+  CFG=1: abs_rel:0.0252 | rmse:0.2471 | a1:0.9992
+  时间: 1.06s
+[GPU:3] 样本:186/454 | ID:DSC_0487.JPG
+  CFG=1: abs_rel:0.0237 | rmse:0.3361 | a1:0.9994
+  时间: 1.07s
+[GPU:5] 样本:302/454 | ID:DSC_0641.JPG
+  CFG=1: abs_rel:0.0300 | rmse:0.1399 | a1:0.9643
+  时间: 1.09s
+[GPU:6] 样本:358/454 | ID:DSC_0709.JPG
+  CFG=1: abs_rel:0.0217 | rmse:0.1570 | a1:0.9998
+  时间: 1.06s
+[GPU:0] 样本:020/454 | ID:DSC_0267.JPG
+  CFG=1: abs_rel:0.0118 | rmse:0.0888 | a1:0.9997
+  时间: 1.03s
+[GPU:7] 样本:415/454 | ID:DSC_6557.JPG
+  CFG=1: abs_rel:0.0212 | rmse:0.2961 | a1:0.9998
+  时间: 1.05s
+[GPU:1] 样本:078/454 | ID:DSC_0299.JPG
+  CFG=1: abs_rel:0.0176 | rmse:0.1704 | a1:0.9990
+  时间: 1.08s
+[GPU:2] 样本:136/454 | ID:DSC_0392.JPG
+  CFG=1: abs_rel:0.0191 | rmse:0.2421 | a1:0.9993
+  时间: 1.10s
+[GPU:4] 样本:248/454 | ID:DSC_0577.JPG
+  CFG=1: abs_rel:0.0758 | rmse:0.9382 | a1:0.9837
+  时间: 1.06s
+[GPU:5] 样本:303/454 | ID:DSC_0688.JPG
+  CFG=1: abs_rel:0.0503 | rmse:0.6811 | a1:0.9990
+  时间: 1.08s
+[GPU:7] 样本:416/454 | ID:DSC_6540.JPG
+  CFG=1: abs_rel:0.0492 | rmse:1.2120 | a1:0.9815
+  时间: 1.06s
+[GPU:6] 样本:359/454 | ID:DSC_6508.JPG
+  CFG=1: abs_rel:0.0227 | rmse:0.1160 | a1:0.9995
+  时间: 1.07s
+[GPU:3] 样本:187/454 | ID:DSC_0471.JPG
+  CFG=1: abs_rel:0.0155 | rmse:0.0644 | a1:1.0000
+  时间: 1.05s
+[GPU:0] 样本:021/454 | ID:DSC_0274.JPG
+  CFG=1: abs_rel:0.0217 | rmse:0.2356 | a1:0.9997
+  时间: 1.08s
+[GPU:1] 样本:079/454 | ID:DSC_0326.JPG
+  CFG=1: abs_rel:0.0806 | rmse:1.3230 | a1:0.9492
+  时间: 1.06s
+[GPU:2] 样本:137/454 | ID:DSC_0396.JPG
+  CFG=1: abs_rel:0.0562 | rmse:1.5430 | a1:0.9722
+  时间: 1.11s
+[GPU:4] 样本:249/454 | ID:DSC_0593.JPG
+  CFG=1: abs_rel:0.0464 | rmse:0.3716 | a1:0.9897
+  时间: 1.01s
+[GPU:5] 样本:304/454 | ID:DSC_0639.JPG
+  CFG=1: abs_rel:0.0308 | rmse:0.1290 | a1:0.9976
+  时间: 0.73s
+[GPU:7] 样本:417/454 | ID:DSC_9264.JPG
+  CFG=1: abs_rel:0.0374 | rmse:0.7512 | a1:0.9861
+  时间: 1.08s
+[GPU:6] 样本:360/454 | ID:DSC_6513.JPG
+  CFG=1: abs_rel:0.0390 | rmse:0.1050 | a1:0.9993
+  时间: 1.06s
+[GPU:1] 样本:080/454 | ID:DSC_0319.JPG
+  CFG=1: abs_rel:0.0228 | rmse:0.3844 | a1:0.9990
+  时间: 1.07s
+[GPU:3] 样本:188/454 | ID:DSC_0472.JPG
+  CFG=1: abs_rel:0.0097 | rmse:0.0395 | a1:1.0000
+  时间: 1.06s
+[GPU:0] 样本:022/454 | ID:DSC_0235.JPG
+  CFG=1: abs_rel:0.0124 | rmse:0.0409 | a1:0.9999
+  时间: 1.08s
+[GPU:2] 样本:138/454 | ID:DSC_0355.JPG
+  CFG=1: abs_rel:0.0238 | rmse:0.5167 | a1:0.9986
+  时间: 1.07s
+[GPU:4] 样本:250/454 | ID:DSC_0594.JPG
+  CFG=1: abs_rel:0.0341 | rmse:0.4110 | a1:0.9916
+  时间: 1.07s
+[GPU:5] 样本:305/454 | ID:DSC_0664.JPG
+  CFG=1: abs_rel:0.0297 | rmse:0.1341 | a1:0.9965
+  时间: 1.08s
+[GPU:7] 样本:418/454 | ID:DSC_9268.JPG
+  CFG=1: abs_rel:0.0256 | rmse:0.4769 | a1:0.9957
+  时间: 1.05s
+[GPU:6] 样本:361/454 | ID:DSC_0713.JPG
+  CFG=1: abs_rel:0.0514 | rmse:0.7309 | a1:0.9971
+  时间: 1.06s
+[GPU:1] 样本:081/454 | ID:DSC_0308.JPG
+  CFG=1: abs_rel:0.0134 | rmse:0.1283 | a1:1.0000
+  时间: 1.09s
+[GPU:4] 样本:251/454 | ID:DSC_0630.JPG
+  CFG=1: abs_rel:0.0116 | rmse:0.0213 | a1:1.0000
+  时间: 1.06s
+[GPU:2] 样本:139/454 | ID:DSC_0397.JPG
+  CFG=1: abs_rel:0.0516 | rmse:1.1639 | a1:0.9702
+  时间: 1.10s
+[GPU:0] 样本:023/454 | ID:DSC_0242.JPG
+  CFG=1: abs_rel:0.0363 | rmse:0.0911 | a1:0.9988
+  时间: 1.09s
+[GPU:5] 样本:306/454 | ID:DSC_0654.JPG
+  CFG=1: abs_rel:0.0380 | rmse:0.1857 | a1:0.9733
+  时间: 1.08s
+[GPU:3] 样本:189/454 | ID:DSC_0432.JPG
+  CFG=1: abs_rel:0.0240 | rmse:0.1081 | a1:1.0000
+  时间: 1.07s
+[GPU:7] 样本:419/454 | ID:DSC_6539.JPG
+  CFG=1: abs_rel:0.0429 | rmse:0.9552 | a1:0.9910
+  时间: 1.07s
+[GPU:6] 样本:362/454 | ID:DSC_6502.JPG
+  CFG=1: abs_rel:0.0236 | rmse:0.1502 | a1:0.9943
+  时间: 1.05s
+[GPU:4] 样本:252/454 | ID:DSC_0602.JPG
+  CFG=1: abs_rel:0.0789 | rmse:0.6547 | a1:0.9601
+  时间: 1.03s
+[GPU:2] 样本:140/454 | ID:DSC_0366.JPG
+  CFG=1: abs_rel:0.0679 | rmse:1.3082 | a1:0.9620
+  时间: 1.11s
+[GPU:0] 样本:024/454 | ID:DSC_0261.JPG
+  CFG=1: abs_rel:0.0196 | rmse:0.6789 | a1:0.9963
+  时间: 1.07s
+[GPU:1] 样本:082/454 | ID:DSC_0313.JPG
+  CFG=1: abs_rel:0.0213 | rmse:0.4052 | a1:0.9967
+  时间: 0.97s
+[GPU:7] 样本:420/454 | ID:DSC_9291.JPG
+  CFG=1: abs_rel:0.2542 | rmse:2.8955 | a1:0.8095
+  时间: 1.06s
+[GPU:3] 样本:190/454 | ID:DSC_0450.JPG
+  CFG=1: abs_rel:0.0219 | rmse:1.0747 | a1:0.9936
+  时间: 1.04s
+[GPU:5] 样本:307/454 | ID:DSC_0669.JPG
+  CFG=1: abs_rel:0.0295 | rmse:0.2407 | a1:0.9990
+  时间: 1.06s
+[GPU:6] 样本:363/454 | ID:DSC_0705.JPG
+  CFG=1: abs_rel:0.0192 | rmse:0.1582 | a1:0.9995
+  时间: 1.07s
+[GPU:4] 样本:253/454 | ID:DSC_0590.JPG
+  CFG=1: abs_rel:0.1172 | rmse:0.6014 | a1:0.9426
+  时间: 1.06s
+[GPU:2] 样本:141/454 | ID:DSC_0394.JPG
+  CFG=1: abs_rel:0.0323 | rmse:1.5935 | a1:0.9918
+  时间: 1.08s
+[GPU:0] 样本:025/454 | ID:DSC_0287.JPG
+  CFG=1: abs_rel:0.0160 | rmse:0.0980 | a1:0.9996
+  时间: 1.07s
+[GPU:7] 样本:421/454 | ID:DSC_9289.JPG
+  CFG=1: abs_rel:0.3579 | rmse:3.3208 | a1:0.6918
+  时间: 1.04s
+[GPU:1] 样本:083/454 | ID:DSC_0314.JPG
+  CFG=1: abs_rel:0.0248 | rmse:0.3986 | a1:0.9991
+  时间: 1.06s
+[GPU:5] 样本:308/454 | ID:DSC_0653.JPG
+  CFG=1: abs_rel:0.0455 | rmse:0.4196 | a1:0.9840
+  时间: 1.07s
+[GPU:3] 样本:191/454 | ID:DSC_0445.JPG
+  CFG=1: abs_rel:0.0144 | rmse:0.0579 | a1:1.0000
+  时间: 1.07s
+[GPU:6] 样本:364/454 | ID:DSC_6492.JPG
+  CFG=1: abs_rel:0.0200 | rmse:0.0922 | a1:0.9993
+  时间: 1.09s
+[GPU:4] 样本:254/454 | ID:DSC_0627.JPG
+  CFG=1: abs_rel:0.0109 | rmse:0.0210 | a1:1.0000
+  时间: 1.07s
+[GPU:0] 样本:026/454 | ID:DSC_0260.JPG
+  CFG=1: abs_rel:0.0936 | rmse:3.1940 | a1:0.8791
+  时间: 1.10s
+[GPU:2] 样本:142/454 | ID:DSC_0411.JPG
+  CFG=1: abs_rel:0.0265 | rmse:0.5715 | a1:0.9990
+  时间: 1.02s
+[GPU:7] 样本:422/454 | ID:DSC_9265.JPG
+  CFG=1: abs_rel:0.0322 | rmse:0.6980 | a1:0.9882
+  时间: 1.05s
+[GPU:1] 样本:084/454 | ID:DSC_0344.JPG
+  CFG=1: abs_rel:0.0230 | rmse:0.5574 | a1:0.9972
+  时间: 1.07s
+[GPU:5] 样本:309/454 | ID:DSC_0681.JPG
+  CFG=1: abs_rel:0.0220 | rmse:0.2790 | a1:0.9986
+  时间: 1.10s
+[GPU:4] 样本:255/454 | ID:DSC_0574.JPG
+  CFG=1: abs_rel:0.0706 | rmse:0.5955 | a1:0.9850
+  时间: 1.08s
+[GPU:6] 样本:365/454 | ID:DSC_6495.JPG
+  CFG=1: abs_rel:0.0175 | rmse:0.0885 | a1:0.9997
+  时间: 1.06s
+[GPU:7] 样本:423/454 | ID:DSC_9292.JPG
+  CFG=1: abs_rel:0.2791 | rmse:3.1786 | a1:0.4996
+  时间: 1.07s
+[GPU:0] 样本:027/454 | ID:DSC_0249.JPG
+  CFG=1: abs_rel:0.0249 | rmse:0.0542 | a1:0.9998
+  时间: 1.07s
+[GPU:3] 样本:192/454 | ID:DSC_0443.JPG
+  CFG=1: abs_rel:0.0115 | rmse:0.0584 | a1:1.0000
+  时间: 1.06s
+[GPU:2] 样本:143/454 | ID:DSC_0414.JPG
+  CFG=1: abs_rel:0.0325 | rmse:1.8232 | a1:0.9886
+  时间: 1.12s
+[GPU:1] 样本:085/454 | ID:DSC_0322.JPG
+  CFG=1: abs_rel:0.0157 | rmse:0.4923 | a1:0.9972
+  时间: 1.05s
+[GPU:5] 样本:310/454 | ID:DSC_0648.JPG
+  CFG=1: abs_rel:0.0603 | rmse:0.2492 | a1:0.9482
+  时间: 0.98s
+[GPU:4] 样本:256/454 | ID:DSC_0583.JPG
+  CFG=1: abs_rel:0.1403 | rmse:1.1044 | a1:0.9025
+  时间: 1.06s
+[GPU:6] 样本:366/454 | ID:DSC_0694.JPG
+  CFG=1: abs_rel:0.0570 | rmse:1.6602 | a1:0.9708
+  时间: 1.06s
+[GPU:7] 样本:424/454 | ID:DSC_9272.JPG
+  CFG=1: abs_rel:0.0121 | rmse:0.0967 | a1:1.0000
+  时间: 1.03s
+[GPU:2] 样本:144/454 | ID:DSC_0351.JPG
+  CFG=1: abs_rel:0.0311 | rmse:1.0415 | a1:0.9902
+  时间: 1.07s
+[GPU:3] 样本:193/454 | ID:DSC_0467.JPG
+  CFG=1: abs_rel:0.0499 | rmse:0.2534 | a1:0.9935
+  时间: 1.05s
+[GPU:0] 样本:028/454 | ID:DSC_0237.JPG
+  CFG=1: abs_rel:0.0301 | rmse:0.0920 | a1:0.9996
+  时间: 1.09s
+[GPU:5] 样本:311/454 | ID:DSC_0642.JPG
+  CFG=1: abs_rel:0.0260 | rmse:0.1079 | a1:0.9992
+  时间: 1.08s
+[GPU:1] 样本:086/454 | ID:DSC_0337.JPG
+  CFG=1: abs_rel:0.0191 | rmse:0.4445 | a1:0.9984
+  时间: 1.06s
+[GPU:4] 样本:257/454 | ID:DSC_0614.JPG
+  CFG=1: abs_rel:0.0219 | rmse:0.0456 | a1:0.9999
+  时间: 1.07s
+[GPU:6] 样本:367/454 | ID:DSC_6514.JPG
+  CFG=1: abs_rel:0.0226 | rmse:0.1093 | a1:0.9993
+  时间: 1.07s
+[GPU:2] 样本:145/454 | ID:DSC_0419.JPG
+  CFG=1: abs_rel:0.0142 | rmse:0.2840 | a1:0.9999
+  时间: 1.09s
+[GPU:1] 样本:087/454 | ID:DSC_0297.JPG
+  CFG=1: abs_rel:0.0263 | rmse:0.1867 | a1:0.9994
+  时间: 1.06s
+[GPU:7] 样本:425/454 | ID:DSC_9260.JPG
+  CFG=1: abs_rel:0.0170 | rmse:0.1323 | a1:0.9996
+  时间: 1.07s
+[GPU:4] 样本:258/454 | ID:DSC_0579.JPG
+  CFG=1: abs_rel:0.0774 | rmse:0.6734 | a1:0.9558
+  时间: 1.05s
+[GPU:3] 样本:194/454 | ID:DSC_0481.JPG
+  CFG=1: abs_rel:0.0136 | rmse:0.1227 | a1:0.9995
+  时间: 1.05s
+[GPU:0] 样本:029/454 | ID:DSC_0239.JPG
+  CFG=1: abs_rel:0.0479 | rmse:0.1241 | a1:0.9699
+  时间: 1.07s
+[GPU:5] 样本:312/454 | ID:DSC_0666.JPG
+  CFG=1: abs_rel:0.0750 | rmse:0.3348 | a1:0.9275
+  时间: 1.07s
+[GPU:6] 样本:368/454 | ID:DSC_0697.JPG
+  CFG=1: abs_rel:0.0615 | rmse:1.5011 | a1:0.9802
+  时间: 1.11s
+[GPU:2] 样本:146/454 | ID:DSC_0415.JPG
+  CFG=1: abs_rel:0.0438 | rmse:1.9574 | a1:0.9887
+  时间: 1.07s
+[GPU:4] 样本:259/454 | ID:DSC_0570.JPG
+  CFG=1: abs_rel:0.0945 | rmse:0.4988 | a1:0.9692
+  时间: 1.06s
+[GPU:1] 样本:088/454 | ID:DSC_0316.JPG
+  CFG=1: abs_rel:0.0204 | rmse:0.2773 | a1:0.9999
+  时间: 1.11s
+[GPU:7] 样本:426/454 | ID:DSC_9266.JPG
+  CFG=1: abs_rel:0.0204 | rmse:0.3925 | a1:0.9971
+  时间: 1.07s
+[GPU:0] 样本:030/454 | ID:DSC_0283.JPG
+  CFG=1: abs_rel:0.0915 | rmse:1.4393 | a1:0.9221
+  时间: 1.07s
+[GPU:5] 样本:313/454 | ID:DSC_0660.JPG
+  CFG=1: abs_rel:0.0269 | rmse:0.1588 | a1:0.9902
+  时间: 1.06s
+[GPU:6] 样本:369/454 | ID:DSC_0707.JPG
+  CFG=1: abs_rel:0.0137 | rmse:0.0938 | a1:0.9998
+  时间: 1.05s
+[GPU:3] 样本:195/454 | ID:DSC_0483.JPG
+  CFG=1: abs_rel:0.0211 | rmse:0.2842 | a1:0.9995
+  时间: 1.00s
+[GPU:4] 样本:260/454 | ID:DSC_0629.JPG
+  CFG=1: abs_rel:0.0094 | rmse:0.0173 | a1:1.0000
+  时间: 1.08s
+[GPU:2] 样本:147/454 | ID:DSC_0393.JPG
+  CFG=1: abs_rel:0.0169 | rmse:0.5294 | a1:0.9947
+  时间: 1.08s
+[GPU:1] 样本:089/454 | ID:DSC_0300.JPG
+  CFG=1: abs_rel:0.0270 | rmse:0.3795 | a1:0.9994
+  时间: 1.08s
+[GPU:7] 样本:427/454 | ID:DSC_9280.JPG
+  CFG=1: abs_rel:0.0303 | rmse:0.6101 | a1:0.9841
+  时间: 1.05s
+[GPU:5] 样本:314/454 | ID:DSC_0662.JPG
+  CFG=1: abs_rel:0.0251 | rmse:0.1891 | a1:0.9955
+  时间: 1.09s
+[GPU:6] 样本:370/454 | ID:DSC_0710.JPG
+  CFG=1: abs_rel:0.0330 | rmse:0.2341 | a1:0.9995
+  时间: 1.07s
+[GPU:0] 样本:031/454 | ID:DSC_0240.JPG
+  CFG=1: abs_rel:0.0305 | rmse:0.0816 | a1:0.9995
+  时间: 1.10s
+[GPU:3] 样本:196/454 | ID:DSC_0473.JPG
+  CFG=1: abs_rel:0.0141 | rmse:0.1196 | a1:0.9996
+  时间: 1.04s
+[GPU:1] 样本:090/454 | ID:DSC_0329.JPG
+  CFG=1: abs_rel:0.0198 | rmse:0.2703 | a1:1.0000
+  时间: 1.04s
+[GPU:2] 样本:148/454 | ID:DSC_0357.JPG
+  CFG=1: abs_rel:0.0528 | rmse:0.8358 | a1:0.9833
+  时间: 1.08s
+[GPU:4] 样本:261/454 | ID:DSC_0619.JPG
+  CFG=1: abs_rel:0.0301 | rmse:0.0554 | a1:0.9996
+  时间: 1.07s
+[GPU:7] 样本:428/454 | ID:DSC_9295.JPG
+  CFG=1: abs_rel:0.0251 | rmse:0.1635 | a1:0.9998
+  时间: 1.05s
+[GPU:6] 样本:371/454 | ID:DSC_6518.JPG
+  CFG=1: abs_rel:0.0344 | rmse:0.1203 | a1:0.9983
+  时间: 1.04s
+[GPU:5] 样本:315/454 | ID:DSC_0652.JPG
+  CFG=1: abs_rel:0.0344 | rmse:0.3658 | a1:0.9930
+  时间: 1.08s
+[GPU:0] 样本:032/454 | ID:DSC_0254.JPG
+  CFG=1: abs_rel:0.0398 | rmse:0.1148 | a1:0.9987
+  时间: 1.07s
+[GPU:3] 样本:197/454 | ID:DSC_0448.JPG
+  CFG=1: abs_rel:0.0200 | rmse:0.7197 | a1:0.9969
+  时间: 1.04s
+[GPU:2] 样本:149/454 | ID:DSC_0362.JPG
+  CFG=1: abs_rel:0.0137 | rmse:0.3368 | a1:1.0000
+  时间: 1.07s
+[GPU:4] 样本:262/454 | ID:DSC_0605.JPG
+  CFG=1: abs_rel:0.0936 | rmse:1.4170 | a1:0.9420
+  时间: 0.98s
+[GPU:1] 样本:091/454 | ID:DSC_0342.JPG
+  CFG=1: abs_rel:0.0252 | rmse:0.6117 | a1:0.9969
+  时间: 1.07s
+[GPU:5] 样本:316/454 | ID:DSC_0686.JPG
+  CFG=1: abs_rel:0.0395 | rmse:0.5316 | a1:0.9969
+  时间: 1.07s
+[GPU:7] 样本:429/454 | ID:DSC_6536.JPG
+  CFG=1: abs_rel:0.0338 | rmse:0.5418 | a1:0.9982
+  时间: 1.05s
+[GPU:6] 样本:372/454 | ID:DSC_0718.JPG
+  CFG=1: abs_rel:0.0685 | rmse:1.6156 | a1:0.9946
+  时间: 1.07s
+[GPU:4] 样本:263/454 | ID:DSC_0597.JPG
+  CFG=1: abs_rel:0.1277 | rmse:0.8846 | a1:0.8838
+  时间: 1.09s
+[GPU:0] 样本:033/454 | ID:DSC_0221.JPG
+  CFG=1: abs_rel:0.0121 | rmse:0.0441 | a1:0.9998
+  时间: 1.08s
+[GPU:2] 样本:150/454 | ID:DSC_0352.JPG
+  CFG=1: abs_rel:0.0365 | rmse:1.3271 | a1:0.9876
+  时间: 1.06s
+[GPU:3] 样本:198/454 | ID:DSC_0462.JPG
+  CFG=1: abs_rel:0.0211 | rmse:0.1060 | a1:1.0000
+  时间: 1.06s
+[GPU:1] 样本:092/454 | ID:DSC_0334.JPG
+  CFG=1: abs_rel:0.0352 | rmse:0.6888 | a1:0.9984
+  时间: 1.07s
+[GPU:5] 样本:317/454 | ID:DSC_0680.JPG
+  CFG=1: abs_rel:0.0191 | rmse:0.1933 | a1:0.9994
+  时间: 1.07s
+[GPU:7] 样本:430/454 | ID:DSC_6556.JPG
+  CFG=1: abs_rel:0.0322 | rmse:0.3101 | a1:0.9999
+  时间: 1.06s
+[GPU:6] 样本:373/454 | ID:DSC_6515.JPG
+  CFG=1: abs_rel:0.0304 | rmse:0.1121 | a1:0.9996
+  时间: 1.07s
+[GPU:4] 样本:264/454 | ID:DSC_0628.JPG
+  CFG=1: abs_rel:0.0086 | rmse:0.0156 | a1:1.0000
+  时间: 1.07s
+[GPU:0] 样本:034/454 | ID:DSC_0268.JPG
+  CFG=1: abs_rel:0.0114 | rmse:0.1019 | a1:0.9994
+  时间: 1.07s
+[GPU:1] 样本:093/454 | ID:DSC_0331.JPG
+  CFG=1: abs_rel:0.0412 | rmse:0.6224 | a1:0.9901
+  时间: 1.07s
+[GPU:2] 样本:151/454 | ID:DSC_0430.JPG
+  CFG=1: abs_rel:0.0206 | rmse:0.0935 | a1:1.0000
+  时间: 1.07s
+[GPU:7] 样本:431/454 | ID:DSC_9269.JPG
+  CFG=1: abs_rel:0.0200 | rmse:0.3555 | a1:0.9973
+  时间: 1.04s
+[GPU:5] 样本:318/454 | ID:DSC_0655.JPG
+  CFG=1: abs_rel:0.0404 | rmse:0.2110 | a1:0.9671
+  时间: 1.07s
+[GPU:3] 样本:199/454 | ID:DSC_0469.JPG
+  CFG=1: abs_rel:0.0222 | rmse:0.0873 | a1:1.0000
+  时间: 1.05s
+[GPU:6] 样本:374/454 | ID:DSC_0714.JPG
+  CFG=1: abs_rel:0.0415 | rmse:0.9344 | a1:0.9792
+  时间: 1.06s
+[GPU:4] 样本:265/454 | ID:DSC_0589.JPG
+  CFG=1: abs_rel:0.1492 | rmse:0.8521 | a1:0.8329
+  时间: 1.06s
+[GPU:0] 样本:035/454 | ID:DSC_0288.JPG
+  CFG=1: abs_rel:0.0174 | rmse:0.1147 | a1:0.9994
+  时间: 1.10s
+[GPU:1] 样本:094/454 | ID:DSC_0345.JPG
+  CFG=1: abs_rel:0.0242 | rmse:0.5522 | a1:0.9970
+  时间: 1.07s
+[GPU:2] 样本:152/454 | ID:DSC_0353.JPG
+  CFG=1: abs_rel:0.0288 | rmse:0.5924 | a1:0.9965
+  时间: 1.06s
+[GPU:5] 样本:319/454 | ID:DSC_0663.JPG
+  CFG=1: abs_rel:0.0198 | rmse:0.1246 | a1:0.9996
+  时间: 1.07s
+[GPU:7] 样本:432/454 | ID:DSC_6538.JPG
+  CFG=1: abs_rel:0.0339 | rmse:0.4337 | a1:0.9943
+  时间: 1.05s
+[GPU:4] 样本:266/454 | ID:DSC_0580.JPG
+  CFG=1: abs_rel:0.0769 | rmse:0.4887 | a1:0.9673
+  时间: 1.06s
+[GPU:6] 样本:375/454 | ID:DSC_6504.JPG
+  CFG=1: abs_rel:0.0475 | rmse:0.2978 | a1:0.9760
+  时间: 1.04s
+[GPU:3] 样本:200/454 | ID:DSC_0459.JPG
+  CFG=1: abs_rel:0.0321 | rmse:0.1923 | a1:0.9993
+  时间: 1.05s
+[GPU:1] 样本:095/454 | ID:DSC_0301.JPG
+  CFG=1: abs_rel:0.0279 | rmse:0.4019 | a1:0.9999
+  时间: 1.06s
+[GPU:0] 样本:036/454 | ID:DSC_0271.JPG
+  CFG=1: abs_rel:0.0165 | rmse:0.1362 | a1:0.9992
+  时间: 1.08s
+[GPU:2] 样本:153/454 | ID:DSC_0410.JPG
+  CFG=1: abs_rel:0.0238 | rmse:0.5507 | a1:0.9984
+  时间: 1.06s
+[GPU:7] 样本:433/454 | ID:DSC_9281.JPG
+  CFG=1: abs_rel:0.0291 | rmse:0.4866 | a1:0.9964
+  时间: 1.05s
+[GPU:4] 样本:267/454 | ID:DSC_0591.JPG
+  CFG=1: abs_rel:0.0615 | rmse:0.4453 | a1:0.9904
+  时间: 1.07s
+[GPU:5] 样本:320/454 | ID:DSC_0670.JPG
+  CFG=1: abs_rel:0.0445 | rmse:0.3178 | a1:0.9959
+  时间: 1.07s
+[GPU:6] 样本:376/454 | ID:DSC_0704.JPG
+  CFG=1: abs_rel:0.0216 | rmse:0.1454 | a1:0.9994
+  时间: 1.06s
+[GPU:3] 样本:201/454 | ID:DSC_0458.JPG
+  CFG=1: abs_rel:0.0260 | rmse:0.2925 | a1:0.9987
+  时间: 1.06s
+[GPU:1] 样本:096/454 | ID:DSC_0338.JPG
+  CFG=1: abs_rel:0.0259 | rmse:0.5518 | a1:0.9974
+  时间: 1.08s
+[GPU:4] 样本:268/454 | ID:DSC_0592.JPG
+  CFG=1: abs_rel:0.0520 | rmse:0.4957 | a1:0.9899
+  时间: 1.06s
+[GPU:2] 样本:154/454 | ID:DSC_0422.JPG
+  CFG=1: abs_rel:0.0503 | rmse:1.6409 | a1:0.9893
+  时间: 1.10s
+[GPU:5] 样本:321/454 | ID:DSC_0644.JPG
+  CFG=1: abs_rel:0.0285 | rmse:0.0772 | a1:0.9999
+  时间: 1.06s
+[GPU:0] 样本:037/454 | ID:DSC_0275.JPG
+  CFG=1: abs_rel:0.0191 | rmse:0.2423 | a1:0.9997
+  时间: 1.08s
+[GPU:6] 样本:377/454 | ID:DSC_6517.JPG
+  CFG=1: abs_rel:0.0239 | rmse:0.0940 | a1:0.9994
+  时间: 1.06s
+[GPU:7] 样本:434/454 | ID:DSC_9293.JPG
+  CFG=1: abs_rel:0.1967 | rmse:1.4765 | a1:0.8165
+  时间: 1.05s
+[GPU:1] 样本:097/454 | ID:DSC_0294.JPG
+  CFG=1: abs_rel:0.0125 | rmse:0.0851 | a1:0.9991
+  时间: 0.99s
+[GPU:3] 样本:202/454 | ID:DSC_0434.JPG
+  CFG=1: abs_rel:0.0388 | rmse:0.1498 | a1:0.9997
+  时间: 1.09s
+[GPU:4] 样本:269/454 | ID:DSC_0624.JPG
+  CFG=1: abs_rel:0.0210 | rmse:0.0438 | a1:1.0000
+  时间: 1.02s
+[GPU:2] 样本:155/454 | ID:DSC_0399.JPG
+  CFG=1: abs_rel:0.0374 | rmse:0.7337 | a1:0.9852
+  时间: 1.07s
+[GPU:5] 样本:322/454 | ID:DSC_0659.JPG
+  CFG=1: abs_rel:0.0401 | rmse:0.2025 | a1:0.9908
+  时间: 1.08s
+[GPU:6] 样本:378/454 | ID:DSC_6491.JPG
+  CFG=1: abs_rel:0.0291 | rmse:0.1207 | a1:0.9992
+  时间: 1.07s
+[GPU:7] 样本:435/454 | ID:DSC_9300.JPG
+  CFG=1: abs_rel:0.0245 | rmse:0.2386 | a1:0.9992
+  时间: 1.06s
+[GPU:0] 样本:038/454 | ID:DSC_0223.JPG
+  CFG=1: abs_rel:0.0038 | rmse:0.0107 | a1:1.0000
+  时间: 1.08s
+[GPU:1] 样本:098/454 | ID:DSC_0327.JPG
+  CFG=1: abs_rel:0.0829 | rmse:1.2292 | a1:0.9410
+  时间: 1.07s
+[GPU:4] 样本:270/454 | ID:DSC_0631.JPG
+  CFG=1: abs_rel:0.0206 | rmse:0.0350 | a1:1.0000
+  时间: 1.04s
+[GPU:3] 样本:203/454 | ID:DSC_0477.JPG
+  CFG=1: abs_rel:0.0269 | rmse:0.7090 | a1:0.9939
+  时间: 1.04s
+[GPU:2] 样本:156/454 | ID:DSC_0401.JPG
+  CFG=1: abs_rel:0.0502 | rmse:0.9707 | a1:0.9831
+  时间: 1.09s
+[GPU:6] 样本:379/454 | ID:DSC_0692.JPG
+  CFG=1: abs_rel:0.0334 | rmse:0.4509 | a1:0.9976
+  时间: 1.06s
+[GPU:5] 样本:323/454 | ID:DSC_0671.JPG
+  CFG=1: abs_rel:0.0591 | rmse:0.3318 | a1:0.9884
+  时间: 1.08s
+[GPU:0] 样本:039/454 | ID:DSC_0286.JPG
+  CFG=1: abs_rel:0.0164 | rmse:0.0958 | a1:0.9997
+  时间: 1.06s
+[GPU:7] 样本:436/454 | ID:DSC_9294.JPG
+  CFG=1: abs_rel:0.0819 | rmse:0.6638 | a1:0.9790
+  时间: 1.06s
+[GPU:1] 样本:099/454 | ID:DSC_0310.JPG
+  CFG=1: abs_rel:0.0155 | rmse:0.1179 | a1:0.9997
+  时间: 1.09s
+[GPU:4] 样本:271/454 | ID:DSC_0596.JPG
+  CFG=1: abs_rel:0.0995 | rmse:0.5261 | a1:0.9405
+  时间: 1.06s
+[GPU:2] 样本:157/454 | ID:DSC_0390.JPG
+  CFG=1: abs_rel:0.0204 | rmse:0.2709 | a1:0.9998
+  时间: 1.08s
+[GPU:3] 样本:204/454 | ID:DSC_0482.JPG
+  CFG=1: abs_rel:0.0248 | rmse:0.2280 | a1:0.9996
+  时间: 1.05s
+[GPU:0] 样本:040/454 | ID:DSC_0291.JPG
+  CFG=1: abs_rel:0.0229 | rmse:0.1593 | a1:0.9978
+  时间: 1.08s
+[GPU:7] 样本:437/454 | ID:DSC_6553.JPG
+  CFG=1: abs_rel:0.0247 | rmse:0.6574 | a1:0.9962
+  时间: 1.02s
+[GPU:5] 样本:324/454 | ID:DSC_0645.JPG
+  CFG=1: abs_rel:0.0333 | rmse:0.0876 | a1:0.9998
+  时间: 1.08s
+[GPU:6] 样本:380/454 | ID:DSC_6507.JPG
+  CFG=1: abs_rel:0.0329 | rmse:0.1469 | a1:0.9991
+  时间: 1.05s
+[GPU:1] 样本:100/454 | ID:DSC_0325.JPG
+  CFG=1: abs_rel:0.0279 | rmse:0.5184 | a1:0.9997
+  时间: 1.07s
+[GPU:4] 样本:272/454 | ID:DSC_0573.JPG
+  CFG=1: abs_rel:0.0622 | rmse:0.3839 | a1:0.9910
+  时间: 1.05s
+[GPU:2] 样本:158/454 | ID:DSC_0386.JPG
+  CFG=1: abs_rel:0.0294 | rmse:0.5741 | a1:0.9986
+  时间: 1.06s
+[GPU:5] 样本:325/454 | ID:DSC_0632.JPG
+  CFG=1: abs_rel:0.0154 | rmse:0.0253 | a1:1.0000
+  时间: 1.10s
+[GPU:0] 样本:041/454 | ID:DSC_0290.JPG
+  CFG=1: abs_rel:0.0182 | rmse:0.1380 | a1:0.9986
+  时间: 1.08s
+[GPU:3] 样本:205/454 | ID:DSC_0475.JPG
+  CFG=1: abs_rel:0.0279 | rmse:1.0703 | a1:0.9945
+  时间: 1.07s
+[GPU:7] 样本:438/454 | ID:DSC_9275.JPG
+  CFG=1: abs_rel:0.0241 | rmse:0.3577 | a1:0.9990
+  时间: 1.05s
+[GPU:6] 样本:381/454 | ID:DSC_6503.JPG
+  CFG=1: abs_rel:0.0331 | rmse:0.1915 | a1:0.9836
+  时间: 1.07s
+[GPU:4] 样本:273/454 | ID:DSC_0586.JPG
+  CFG=1: abs_rel:0.0820 | rmse:1.0521 | a1:0.9339
+  时间: 1.07s
+[GPU:1] 样本:101/454 | ID:DSC_0347.JPG
+  CFG=1: abs_rel:0.0287 | rmse:0.6334 | a1:0.9969
+  时间: 1.05s
+[GPU:5] 样本:326/454 | ID:DSC_0634.JPG
+  CFG=1: abs_rel:0.0170 | rmse:0.0499 | a1:0.9999
+  时间: 1.03s
+[GPU:2] 样本:159/454 | ID:DSC_0429.JPG
+  CFG=1: abs_rel:0.0197 | rmse:0.0917 | a1:1.0000
+  时间: 1.06s
+[GPU:0] 样本:042/454 | ID:DSC_0228.JPG
+  CFG=1: abs_rel:0.0068 | rmse:0.0417 | a1:0.9944
+  时间: 1.07s
+[GPU:3] 样本:206/454 | ID:DSC_0466.JPG
+  CFG=1: abs_rel:0.0445 | rmse:0.2271 | a1:0.9950
+  时间: 1.06s
+[GPU:4] 样本:274/454 | ID:DSC_0588.JPG
+  CFG=1: abs_rel:0.1031 | rmse:0.5451 | a1:0.9599
+  时间: 1.04s
+[GPU:6] 样本:382/454 | ID:DSC_0712.JPG
+  CFG=1: abs_rel:0.0755 | rmse:0.8093 | a1:0.9853
+  时间: 1.07s
+[GPU:7] 样本:439/454 | ID:DSC_9277.JPG
+  CFG=1: abs_rel:0.0225 | rmse:0.2569 | a1:0.9986
+  时间: 1.05s
+[GPU:1] 样本:102/454 | ID:DSC_0323.JPG
+  CFG=1: abs_rel:0.0277 | rmse:0.5681 | a1:0.9992
+  时间: 1.05s
+[GPU:5] 样本:327/454 | ID:DSC_0638.JPG
+  CFG=1: abs_rel:0.0146 | rmse:0.0487 | a1:1.0000
+  时间: 1.08s
+[GPU:2] 样本:160/454 | ID:DSC_0405.JPG
+  CFG=1: abs_rel:0.0950 | rmse:1.4937 | a1:0.8385
+  时间: 1.08s
+[GPU:4] 样本:275/454 | ID:DSC_0581.JPG
+  CFG=1: abs_rel:0.0824 | rmse:0.5362 | a1:0.9853
+  时间: 1.05s
+[GPU:6] 样本:383/454 | ID:DSC_0695.JPG
+  CFG=1: abs_rel:0.0609 | rmse:0.8156 | a1:0.9917
+  时间: 1.05s
+[GPU:7] 样本:440/454 | ID:DSC_9303.JPG
+  CFG=1: abs_rel:0.0239 | rmse:0.2894 | a1:0.9989
+  时间: 1.05s
+[GPU:0] 样本:043/454 | ID:DSC_0266.JPG
+  CFG=1: abs_rel:0.0200 | rmse:0.1456 | a1:0.9998
+  时间: 1.08s
+[GPU:3] 样本:207/454 | ID:DSC_0435.JPG
+  CFG=1: abs_rel:0.0529 | rmse:0.2005 | a1:0.9994
+  时间: 1.04s
+[GPU:1] 样本:103/454 | ID:DSC_0315.JPG
+  CFG=1: abs_rel:0.0231 | rmse:0.2891 | a1:1.0000
+  时间: 1.07s
+[GPU:5] 样本:328/454 | ID:DSC_0651.JPG
+  CFG=1: abs_rel:0.0380 | rmse:0.3665 | a1:0.9976
+  时间: 1.08s
+[GPU:2] 样本:161/454 | ID:DSC_0356.JPG
+  CFG=1: abs_rel:0.0228 | rmse:0.5095 | a1:0.9984
+  时间: 1.10s
+[GPU:4] 样本:276/454 | ID:DSC_0615.JPG
+  CFG=1: abs_rel:0.0295 | rmse:0.0545 | a1:0.9997
+  时间: 1.08s
+[GPU:6] 样本:384/454 | ID:DSC_6487.JPG
+  CFG=1: abs_rel:0.0125 | rmse:0.0385 | a1:0.9998
+  时间: 1.06s
+[GPU:0] 样本:044/454 | ID:DSC_0253.JPG
+  CFG=1: abs_rel:0.0248 | rmse:0.0687 | a1:0.9992
+  时间: 1.06s
+[GPU:7] 样本:441/454 | ID:DSC_9257.JPG
+  CFG=1: abs_rel:0.0180 | rmse:0.1409 | a1:0.9997
+  时间: 1.05s
+[GPU:3] 样本:208/454 | ID:DSC_0454.JPG
+  CFG=1: abs_rel:0.0327 | rmse:0.1987 | a1:0.9998
+  时间: 1.06s
+[GPU:5] 样本:329/454 | ID:DSC_0687.JPG
+  CFG=1: abs_rel:0.0437 | rmse:0.5990 | a1:0.9989
+  时间: 1.09s
+[GPU:1] 样本:104/454 | ID:DSC_0321.JPG
+  CFG=1: abs_rel:0.0200 | rmse:0.4731 | a1:0.9976
+  时间: 1.07s
+[GPU:4] 样本:277/454 | ID:DSC_0572.JPG
+  CFG=1: abs_rel:0.1066 | rmse:0.7679 | a1:0.9763
+  时间: 0.99s
+[GPU:6] 样本:385/454 | ID:DSC_0702.JPG
+  CFG=1: abs_rel:0.0480 | rmse:1.4577 | a1:0.9889
+  时间: 1.05s
+[GPU:2] 样本:162/454 | ID:DSC_0407.JPG
+  CFG=1: abs_rel:0.0393 | rmse:0.7195 | a1:0.9922
+  时间: 1.07s
+[GPU:0] 样本:045/454 | ID:DSC_0263.JPG
+  CFG=1: abs_rel:0.0241 | rmse:0.2215 | a1:0.9970
+  时间: 1.06s
+[GPU:7] 样本:442/454 | ID:DSC_9301.JPG
+  CFG=1: abs_rel:0.0290 | rmse:0.2887 | a1:0.9989
+  时间: 1.05s
+[GPU:5] 样本:330/454 | ID:DSC_0684.JPG
+  CFG=1: abs_rel:0.0411 | rmse:0.4096 | a1:0.9989
+  时间: 1.08s
+[GPU:1] 样本:105/454 | ID:DSC_0304.JPG
+  CFG=1: abs_rel:0.0340 | rmse:0.5831 | a1:0.9996
+  时间: 1.06s
+[GPU:4] 样本:278/454 | ID:DSC_0575.JPG
+  CFG=1: abs_rel:0.0370 | rmse:0.4306 | a1:0.9908
+  时间: 1.05s
+[GPU:3] 样本:209/454 | ID:DSC_0470.JPG
+  CFG=1: abs_rel:0.0265 | rmse:0.1080 | a1:1.0000
+  时间: 1.05s
+[GPU:6] 样本:386/454 | ID:DSC_0703.JPG
+  CFG=1: abs_rel:0.0189 | rmse:0.1891 | a1:0.9969
+  时间: 1.05s
+[GPU:2] 样本:163/454 | ID:DSC_0388.JPG
+  CFG=1: abs_rel:0.0564 | rmse:0.9185 | a1:0.9832
+  时间: 1.07s
+[GPU:0] 样本:046/454 | ID:DSC_0273.JPG
+  CFG=1: abs_rel:0.0162 | rmse:0.1057 | a1:1.0000
+  时间: 1.07s
+[GPU:5] 样本:331/454 | ID:DSC_0675.JPG
+  CFG=1: abs_rel:0.0113 | rmse:0.0575 | a1:1.0000
+  时间: 1.07s
+[GPU:7] 样本:443/454 | ID:DSC_6537.JPG
+  CFG=1: abs_rel:0.0418 | rmse:0.7019 | a1:0.9950
+  时间: 1.04s
+[GPU:1] 样本:106/454 | ID:DSC_0307.JPG
+  CFG=1: abs_rel:0.0142 | rmse:0.1936 | a1:0.9999
+  时间: 1.05s
+[GPU:4] 样本:279/454 | ID:DSC_0625.JPG
+  CFG=1: abs_rel:0.0159 | rmse:0.0370 | a1:0.9999
+  时间: 1.04s
+[GPU:2] 样本:164/454 | ID:DSC_0400.JPG
+  CFG=1: abs_rel:0.0657 | rmse:1.0872 | a1:0.9856
+  时间: 1.05s
+[GPU:3] 样本:210/454 | ID:DSC_0453.JPG
+  CFG=1: abs_rel:0.0315 | rmse:0.3282 | a1:0.9996
+  时间: 1.04s
+[GPU:6] 样本:387/454 | ID:DSC_6489.JPG
+  CFG=1: abs_rel:0.0286 | rmse:0.1532 | a1:0.9967
+  时间: 1.05s
+[GPU:0] 样本:047/454 | ID:DSC_0250.JPG
+  CFG=1: abs_rel:0.0360 | rmse:0.0796 | a1:0.9969
+  时间: 1.08s
+[GPU:7] 样本:444/454 | ID:DSC_6548.JPG
+  CFG=1: abs_rel:0.0261 | rmse:0.6310 | a1:0.9953
+  时间: 1.07s
+[GPU:4] 样本:280/454 | ID:DSC_0587.JPG
+  CFG=1: abs_rel:0.0718 | rmse:0.4491 | a1:0.9738
+  时间: 1.03s
+[GPU:5] 样本:332/454 | ID:DSC_0667.JPG
+  CFG=1: abs_rel:0.0377 | rmse:0.1960 | a1:0.9924
+  时间: 1.08s
+[GPU:1] 样本:107/454 | ID:DSC_0312.JPG
+  CFG=1: abs_rel:0.0216 | rmse:0.4031 | a1:0.9976
+  时间: 1.05s
+[rank4]:[W317 17:24:21.198027481 ProcessGroupNCCL.cpp:4561] [PG ID 0 PG GUID 0 Rank 4]  using GPU 4 to perform barrier as devices used by this process are currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect. Specify device_ids in barrier() to force use of a particular device, or call init_process_group() with a device_id.
+[GPU:2] 样本:165/454 | ID:DSC_0408.JPG
+  CFG=1: abs_rel:0.0255 | rmse:0.5291 | a1:0.9966
+  时间: 1.05s
+[GPU:6] 样本:388/454 | ID:DSC_6490.JPG
+  CFG=1: abs_rel:0.0262 | rmse:0.1496 | a1:0.9988
+  时间: 1.00s
+[GPU:3] 样本:211/454 | ID:DSC_0461.JPG
+  CFG=1: abs_rel:0.0255 | rmse:0.1188 | a1:1.0000
+  时间: 1.05s
+[GPU:5] 样本:333/454 | ID:DSC_0689.JPG
+  CFG=1: abs_rel:0.0371 | rmse:0.5354 | a1:0.9989
+  时间: 1.06s
+[GPU:7] 样本:445/454 | ID:DSC_9299.JPG
+  CFG=1: abs_rel:0.0224 | rmse:0.2050 | a1:0.9985
+  时间: 1.05s
+[GPU:0] 样本:048/454 | ID:DSC_0241.JPG
+  CFG=1: abs_rel:0.0257 | rmse:0.0891 | a1:0.9985
+  时间: 1.06s
+[GPU:1] 样本:108/454 | ID:DSC_0330.JPG
+  CFG=1: abs_rel:0.0261 | rmse:0.3769 | a1:0.9999
+  时间: 1.02s
+[GPU:6] 样本:389/454 | ID:DSC_0696.JPG
+  CFG=1: abs_rel:0.0707 | rmse:1.5623 | a1:0.9767
+  时间: 1.06s
+[GPU:2] 样本:166/454 | ID:DSC_0428.JPG
+  CFG=1: abs_rel:0.0275 | rmse:0.1409 | a1:1.0000
+  时间: 1.07s
+[GPU:3] 样本:212/454 | ID:DSC_0437.JPG
+  CFG=1: abs_rel:0.0500 | rmse:0.2340 | a1:0.9964
+  时间: 1.05s
+[GPU:7] 样本:446/454 | ID:DSC_9271.JPG
+  CFG=1: abs_rel:0.0133 | rmse:0.2616 | a1:0.9988
+  时间: 1.04s
+[GPU:5] 样本:334/454 | ID:DSC_0657.JPG
+  CFG=1: abs_rel:0.0208 | rmse:0.1395 | a1:0.9998
+  时间: 1.00s
+[GPU:1] 样本:109/454 | ID:DSC_0309.JPG
+  CFG=1: abs_rel:0.0192 | rmse:0.1821 | a1:0.9986
+  时间: 1.06s
+[GPU:0] 样本:049/454 | ID:DSC_0238.JPG
+  CFG=1: abs_rel:0.0278 | rmse:0.0756 | a1:1.0000
+  时间: 1.05s
+[GPU:6] 样本:390/454 | ID:DSC_6505.JPG
+  CFG=1: abs_rel:0.0314 | rmse:0.1391 | a1:0.9891
+  时间: 1.06s
+[GPU:2] 样本:167/454 | ID:DSC_0412.JPG
+  CFG=1: abs_rel:0.0305 | rmse:0.6014 | a1:0.9993
+  时间: 1.07s
+[GPU:7] 样本:447/454 | ID:DSC_9298.JPG
+  CFG=1: abs_rel:0.0407 | rmse:1.0096 | a1:0.9883
+  时间: 1.04s
+[GPU:5] 样本:335/454 | ID:DSC_0665.JPG
+  CFG=1: abs_rel:0.0456 | rmse:0.2080 | a1:0.9787
+  时间: 1.06s
+[GPU:3] 样本:213/454 | ID:DSC_0468.JPG
+  CFG=1: abs_rel:0.0559 | rmse:0.2566 | a1:0.9999
+  时间: 1.04s
+[GPU:1] 样本:110/454 | ID:DSC_0336.JPG
+  CFG=1: abs_rel:0.0264 | rmse:0.5358 | a1:0.9992
+  时间: 1.05s
+[GPU:0] 样本:050/454 | ID:DSC_0272.JPG
+  CFG=1: abs_rel:0.0123 | rmse:0.0952 | a1:0.9997
+  时间: 1.07s
+[GPU:6] 样本:391/454 | ID:DSC_0708.JPG
+  CFG=1: abs_rel:0.0125 | rmse:0.0584 | a1:1.0000
+  时间: 1.07s
+[GPU:2] 样本:168/454 | ID:DSC_0413.JPG
+  CFG=1: abs_rel:0.0392 | rmse:1.7465 | a1:0.9863
+  时间: 1.06s
+[GPU:7] 样本:448/454 | ID:DSC_9285.JPG
+  CFG=1: abs_rel:0.0324 | rmse:0.7551 | a1:0.9867
+  时间: 1.04s
+[GPU:5] 样本:336/454 | ID:DSC_0661.JPG
+  CFG=1: abs_rel:0.0250 | rmse:0.1861 | a1:0.9850
+  时间: 1.05s
+[rank5]:[W317 17:24:29.249599912 ProcessGroupNCCL.cpp:4561] [PG ID 0 PG GUID 0 Rank 5]  using GPU 5 to perform barrier as devices used by this process are currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect. Specify device_ids in barrier() to force use of a particular device, or call init_process_group() with a device_id.
+[rank2]:[W317 17:24:29.263941100 ProcessGroupNCCL.cpp:4561] [PG ID 0 PG GUID 0 Rank 2]  using GPU 2 to perform barrier as devices used by this process are currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect. Specify device_ids in barrier() to force use of a particular device, or call init_process_group() with a device_id.
+[GPU:1] 样本:111/454 | ID:DSC_0343.JPG
+  CFG=1: abs_rel:0.0230 | rmse:0.5739 | a1:0.9966
+  时间: 1.06s
+[GPU:3] 样本:214/454 | ID:DSC_0444.JPG
+  CFG=1: abs_rel:0.0272 | rmse:0.1248 | a1:1.0000
+  时间: 0.97s
+[GPU:0] 样本:051/454 | ID:DSC_0251.JPG
+  CFG=1: abs_rel:0.0372 | rmse:0.0835 | a1:0.9982
+  时间: 1.06s
+[GPU:6] 样本:392/454 | ID:DSC_6496.JPG
+  CFG=1: abs_rel:0.0713 | rmse:0.2786 | a1:0.9684
+  时间: 1.06s
+[GPU:7] 样本:449/454 | ID:DSC_6560.JPG
+  CFG=1: abs_rel:0.0342 | rmse:0.4617 | a1:0.9985
+  时间: 1.05s
+[rank6]:[W317 17:24:31.606571260 ProcessGroupNCCL.cpp:4561] [PG ID 0 PG GUID 0 Rank 6]  using GPU 6 to perform barrier as devices used by this process are currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect. Specify device_ids in barrier() to force use of a particular device, or call init_process_group() with a device_id.
+[GPU:0] 样本:052/454 | ID:DSC_0219.JPG
+  CFG=1: abs_rel:0.0329 | rmse:0.0832 | a1:0.9989
+  时间: 1.07s
+[GPU:1] 样本:112/454 | ID:DSC_0317.JPG
+  CFG=1: abs_rel:0.0194 | rmse:0.3503 | a1:0.9997
+  时间: 1.08s
+[GPU:3] 样本:215/454 | ID:DSC_0460.JPG
+  CFG=1: abs_rel:0.0270 | rmse:0.1337 | a1:0.9992
+  时间: 1.04s
+[GPU:7] 样本:450/454 | ID:DSC_9270.JPG
+  CFG=1: abs_rel:0.0159 | rmse:0.3067 | a1:0.9981
+  时间: 1.05s
+[rank1]:[W317 17:24:33.513583109 ProcessGroupNCCL.cpp:4561] [PG ID 0 PG GUID 0 Rank 1]  using GPU 1 to perform barrier as devices used by this process are currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect. Specify device_ids in barrier() to force use of a particular device, or call init_process_group() with a device_id.
+[GPU:3] 样本:216/454 | ID:DSC_0485.JPG
+  CFG=1: abs_rel:0.0172 | rmse:0.2073 | a1:0.9995
+  时间: 1.05s
+[GPU:0] 样本:053/454 | ID:DSC_0231.JPG
+  CFG=1: abs_rel:0.0102 | rmse:0.0425 | a1:1.0000
+  时间: 1.09s
+[GPU:7] 样本:451/454 | ID:DSC_9259.JPG
+  CFG=1: abs_rel:0.0141 | rmse:0.1330 | a1:0.9994
+  时间: 1.07s
+[GPU:0] 样本:054/454 | ID:DSC_0292.JPG
+  CFG=1: abs_rel:0.0185 | rmse:0.1333 | a1:0.9990
+  时间: 1.00s
+[GPU:3] 样本:217/454 | ID:DSC_0446.JPG
+  CFG=1: abs_rel:0.0143 | rmse:0.0814 | a1:1.0000
+  时间: 1.05s
+[GPU:7] 样本:452/454 | ID:DSC_9261.JPG
+  CFG=1: abs_rel:0.0268 | rmse:0.2370 | a1:1.0000
+  时间: 1.04s
+[GPU:0] 样本:055/454 | ID:DSC_0230.JPG
+  CFG=1: abs_rel:0.0196 | rmse:0.0724 | a1:0.9994
+  时间: 1.06s
+[GPU:3] 样本:218/454 | ID:DSC_0439.JPG
+  CFG=1: abs_rel:0.0499 | rmse:0.2456 | a1:0.9962
+  时间: 1.03s
+[GPU:7] 样本:453/454 | ID:DSC_9262.JPG
+  CFG=1: abs_rel:0.0206 | rmse:0.2244 | a1:0.9997
+  时间: 1.04s
+[GPU:0] 样本:056/454 | ID:DSC_0255.JPG
+  CFG=1: abs_rel:0.0417 | rmse:0.0836 | a1:0.9981
+  时间: 1.05s
+[rank0]:[W317 17:24:41.638034277 ProcessGroupNCCL.cpp:4561] [PG ID 0 PG GUID 0 Rank 0]  using GPU 0 to perform barrier as devices used by this process are currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect. Specify device_ids in barrier() to force use of a particular device, or call init_process_group() with a device_id.
+NCCL version 2.21.5+cuda12.4
+[GPU:3] 样本:219/454 | ID:DSC_0463.JPG
+  CFG=1: abs_rel:0.0214 | rmse:0.1117 | a1:1.0000
+  时间: 1.03s
+[GPU:7] 样本:454/454 | ID:DSC_9278.JPG
+  CFG=1: abs_rel:0.0193 | rmse:0.1610 | a1:1.0000
+  时间: 1.05s
+[rank7]:[W317 17:24:43.345722791 ProcessGroupNCCL.cpp:4561] [PG ID 0 PG GUID 0 Rank 7]  using GPU 7 to perform barrier as devices used by this process are currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect. Specify device_ids in barrier() to force use of a particular device, or call init_process_group() with a device_id.
+[GPU:3] 样本:220/454 | ID:DSC_0474.JPG
+  CFG=1: abs_rel:0.0330 | rmse:0.5488 | a1:0.9965
+  时间: 1.03s
+[GPU:3] 样本:221/454 | ID:DSC_0486.JPG
+  CFG=1: abs_rel:0.0213 | rmse:0.2603 | a1:0.9994
+  时间: 1.04s
+[GPU:3] 样本:222/454 | ID:DSC_0456.JPG
+  CFG=1: abs_rel:0.0183 | rmse:0.2422 | a1:0.9995
+  时间: 1.04s
+[GPU:3] 样本:223/454 | ID:DSC_0488.JPG
+  CFG=1: abs_rel:0.0225 | rmse:0.2958 | a1:0.9998
+  时间: 1.04s
+[GPU:3] 样本:224/454 | ID:DSC_0440.JPG
+  CFG=1: abs_rel:0.0152 | rmse:0.0784 | a1:1.0000
+  时间: 1.05s
+[rank3]:[W317 17:24:54.647361498 ProcessGroupNCCL.cpp:4561] [PG ID 0 PG GUID 0 Rank 3]  using GPU 3 to perform barrier as devices used by this process are currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect. Specify device_ids in barrier() to force use of a particular device, or call init_process_group() with a device_id.
+
+数据集 eth3d 评估完成!
+----------------------------------------------------------------------------------------------------
+| Dataset | Model | CFG | abs_rel | sq_rel | rmse | rmse_log | a1 | a2 | a3 |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| eth3d | LDRN | CFG=1 | 0.0379 | 0.0520 | 0.4701 | 0.0546 | 0.9877 | 0.9966 | 0.9985 |
+样本数: 1
+平均处理时间: 1.14秒/图像
+----------------------------------------------------------------------------------------------------
+
+结果保存至: ./infer/eval_verify_eth3d_8gpu/LDRN/eth3d
+
+所有数据集评估完成! 结果保存在: ./infer/eval_verify_eth3d_8gpu/LDRN
+双CFG评估结果摘要已保存至: ./infer/eval_verify_eth3d_8gpu/LDRN/LDRN.txt
