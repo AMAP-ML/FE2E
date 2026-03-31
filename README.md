@@ -5,7 +5,7 @@
 [![GitHub](https://img.shields.io/github/stars/AMAP-ML/FE2E?style=social)](https://github.com/AMAP-ML/FE2E)
 [![HuggingFace](https://img.shields.io/badge/🤗%20HuggingFace-Model-yellow)](https://huggingface.co/exander/FE2E)
 [![Video](https://img.shields.io/badge/BiliBili-Video-00A1D6)](https://www.bilibili.com/video/BV1zYXdBXE2x)
-[![Video](https://img.shields.io/badge/YouTube-Video-red)](https://www.youtube.com/watch?v=M314fHXVPOo)
+[![Video](https://img.shields.io/badge/YouTube-Video-red)](https://youtu.be/fyXwwH_-o5w)
 
 [Jiyuan Wang](https://wangjiyuan9.github.io/)<sup>1,2</sup>,
 [Chunyu Lin](https://scholar.google.com/citations?hl=zh-CN&user=t8xkhscAAAAJ)<sup>1&#9993;</sup>,
